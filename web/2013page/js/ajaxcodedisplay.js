@@ -1,0 +1,8 @@
+/*
+  Ajax Code Display 
+  written by Christian Heilmann (http://wait-till-i.com)
+  license:http://creativecommons.org/licenses/by/3.0/
+  requires on jQuery 1.2.2 or newer
+  MINIFIED VERSION, DO NOT EDIT!
+*/
+$(document).ready(function(){$('a.codeexample').each(function(){if(this.className.indexOf('dodisplay')!==-1){$(this).toggle(function(){$(this).after('<iframe class="codeexample" src='+this.href+'></iframe>');this.oh=this.innerHTML;this.innerHTML='close';},function(){this.parentNode.removeChild(this.nextSibling);this.innerHTML=this.oh;});}var link=this;var h=this.className.match(/highlight\[([^\]]+)/);var b=this.className.match(/lines\[([^\]]+)/);var gr=function(rg){var e=rg.split(',');var reg=[];for(var i=0,j=e.length;i<j;i++){if(e[i].indexOf('-')===-1){reg.push(+e[i]);}else{var s=+e[i].split('-')[0];var en=+e[i].split('-')[1];for(s;s<=en;s++){reg.push(+s);};};};return reg;};var cov=function(c){var co=[];c=c.replace(/&/mg,'&#38;');c=c.replace(/</mg,'&#60;');c=c.replace(/>/mg,'&#62;');c=c.replace(/\"/mg,'&#34;');c=c.replace(/\t/g,'  ');var l=c.split(/\r?\n/);if(h){var th=gr(h[1]);for(var i=0,j=th.length;i<j;i++){var line=l[th[i]-1];if(line){l[th[i]-1]='<strong>'+line+'</strong>';};};};if(b){var cu=gr(b[1]);for(var i=0,j=cu.length;i<j;i++){var line=l[cu[i]-1];if(i>0&&cu[i]!==(cu[i-1])+1){co.push('[...]');};if(line){var html='<span>'+(cu[i])+'</span>\t'+line;co.push(html);};};}else{for(var i=0,j=l.length;i<j;i++){var html='<span>'+(i+1)+'</span>\t'+l[i];co.push(html);};};$(link).after('<pre class="codeexample"><code>'+co.join('\n')+'</code></pre>');};$.ajax({url:this.href,timeout:4000,success:cov});});});
