@@ -30,6 +30,20 @@ li {
 .constraint {
   margin: 0 auto; }
 
+.title {
+  margin-top: 40px;
+  padding: 8px; }
+  .title p {
+    font-size: 24px; }
+
+.subtitle {
+  width: 100px;
+  padding: 8px;
+  border-bottom: solid 3px #1f2020; }
+  .subtitle p {
+    font-size: 16px;
+    text-align: center; }
+
 @media all and (max-width: 479px) {
   .constraint {
     width: 270px; }
@@ -126,3 +140,72 @@ li {
 #nav {
   background-color: #1f2020;
   height: 70px; }
+
+#gallery {
+  padding-top: 1px;
+  background-color: #e3e3e3; }
+  #gallery .title {
+    margin-bottom: 20px; }
+  #gallery .subtitle {
+    margin-left: 12px;
+    margin-bottom: 30px; }
+  #gallery #gallery-works {
+    margin-bottom: 40px;
+    zoom: 1; }
+    #gallery #gallery-works:before, #gallery #gallery-works:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #gallery #gallery-works:after {
+      clear: both; }
+  #gallery #gallery-making {
+    zoom: 1; }
+    #gallery #gallery-making:before, #gallery #gallery-making:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #gallery #gallery-making:after {
+      clear: both; }
+  #gallery li {
+    float: left; }
+  #gallery .work-elem {
+    margin-bottom: 30px;
+    width: 270px; }
+    #gallery .work-elem .work-img {
+      margin-left: 20px;
+      width: 230px;
+      height: 172.5px;
+      overflow: hidden;
+      border-radius: 8px; }
+      #gallery .work-elem .work-img img {
+        width: 230px;
+        height: 172.5px;
+        border-radius: 8px; }
+      #gallery .work-elem .work-img .work-description {
+        height: 60px;
+        position: relative;
+        border-radius: 8px;
+        top: -60px;
+        background-color: rgba(0, 0, 0, 0.35); }
+        #gallery .work-elem .work-img .work-description p {
+          margin-left: 12px;
+          margin-bottom: 8px;
+          font-size: 14px;
+          color: #efefef; }
+        #gallery .work-elem .work-img .work-description .work-title {
+          padding-top: 10px; }
+  #gallery .making-elem {
+    margin-bottom: 30px;
+    width: 270px; }
+    #gallery .making-elem img {
+      margin-left: 20px;
+      width: 230px;
+      height: 172.5px;
+      overflow: hidden;
+      border-radius: 8px; }
+      #gallery .making-elem img img {
+        width: 230px;
+        height: 172.5px;
+        border-radius: 8px; }
