@@ -1,5 +1,14 @@
 /* font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+.red {
+  background-color: #00f; }
+
+.green {
+  background-color: #0f0; }
+
+.blue {
+  background-color: #f00; }
+
 body {
   background-color: #fff;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -21,6 +30,27 @@ li {
 #top #top-img {
   margin: 0 auto;
   width: 540px; }
+#top #top-info {
+  padding: 8px;
+  border-left: solid 2px #1f2020;
+  float: right;
+  margin-right: 100px; }
+  #top #top-info p {
+    color: #1f2020;
+    font-size: 16px;
+    margin-bottom: 4px; }
+#top #top-city-img {
+  height: 100px;
+  background-image: url("../img/city.png"); }
+#top .constraint {
+  zoom: 1; }
+  #top .constraint:before, #top .constraint:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #top .constraint:after {
+    clear: both; }
 
 #nav {
   background-color: #1f2020;
@@ -37,4 +67,20 @@ li {
 /* pc */
 @media all and (min-width: 768px) {
   .constraint {
-    width: 810px; } }
+    width: 810px; }
+
+  #top.constraing > * {
+    float: left; }
+
+  #top #top-img {
+    margin-left: 0px;
+    float: left; }
+  #top #top-info {
+    width: 254px px-2px;
+    float: left;
+    padding: 8px;
+    margin-right: 0px; }
+
+  #nav {
+    background-color: #1f2020;
+    height: 70px; } }
