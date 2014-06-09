@@ -302,6 +302,45 @@ section {
 }
 
 #intro {
+  .title {
+    margin-bottom: 40px;
+  }
+  .container {
+    margin-bottom: 60px;
+    &>div {
+      float: left;
+    }
+    .text-container {
+      width: $elem-width * 2;
+      &>div {
+        margin-left: 80px;
+      }
+      .about {
+        margin-bottom: 30px;
+        border-left: solid 2px $black;
+        padding: $padding 0;
+        p.name {
+          margin-left: 30px;
+          margin-bottom: 30px;
+          font-size: 2em;
+        }
+        p {
+          margin-bottom: 8px;
+          margin-left: 40px;
+        }
+      }
+    }
+    .img-container {
+      width: $elem-width;
+      $img-width: ($elem-width) - 10px;
+      img {
+        width:  $img-width;
+        height: $img-width;
+      }
+      @include clearfix;
+    }
+    @include clearfix;
+  }
 
   @media all and (max-width: 479px) {
   }

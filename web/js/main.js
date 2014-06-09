@@ -11,15 +11,6 @@ var main = {
   },
 };
 
-main.sections = [
-  '#top',
-  '#nav',
-  '#intro',
-  '#gallery',
-  '#staff',
-  '#footer',
-];
-
 main.scroll = {
   init: function() {
     // var WIDTH = $(window).width();
@@ -36,20 +27,8 @@ main.scroll = {
     });
   },
   to: function (section) {
-    var top = 0;
-    var found = false;
-    for (var i = 0, l = main.sections.length; i < l; i++) {
-      var _section = main.sections[i];
-      if (_section == section) {
-        found = true;
-        break;
-      }
-      top += $(_section).height();
-      if (_section == "#nav") top -= $(_section).height();
-    }
-    if (!found) {
-      return;
-    }
+    var top = $(section).offset().top;
+    if (section != '#top') top -= 80;
     $('html, body').animate({ scrollTop: top}, 'fast');
   },
 };

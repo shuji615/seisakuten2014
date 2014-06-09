@@ -205,6 +205,49 @@ li {
   #nav-alt.hidden {
     display: none; }
 
+#intro .title {
+  margin-bottom: 40px; }
+#intro .container {
+  margin-bottom: 60px;
+  zoom: 1; }
+  #intro .container > div {
+    float: left; }
+  #intro .container .text-container {
+    width: 540px; }
+    #intro .container .text-container > div {
+      margin-left: 80px; }
+    #intro .container .text-container .about {
+      margin-bottom: 30px;
+      border-left: solid 2px #1f2020;
+      padding: 8px 0; }
+      #intro .container .text-container .about p.name {
+        margin-left: 30px;
+        margin-bottom: 30px;
+        font-size: 2em; }
+      #intro .container .text-container .about p {
+        margin-bottom: 8px;
+        margin-left: 40px; }
+  #intro .container .img-container {
+    width: 270px;
+    zoom: 1; }
+    #intro .container .img-container img {
+      width: 260px;
+      height: 260px; }
+    #intro .container .img-container:before, #intro .container .img-container:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #intro .container .img-container:after {
+      clear: both; }
+  #intro .container:before, #intro .container:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #intro .container:after {
+    clear: both; }
+
 #gallery {
   padding-top: 1px;
   background-color: #f8f8f8; }
