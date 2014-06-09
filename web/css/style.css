@@ -31,38 +31,64 @@ li {
   margin: 0 auto; }
 
 /* all */
-@media all {
-  #top #top-img {
-    margin: 0 auto;
-    width: 540px; }
+#top #top-img {
+  margin: 0 auto;
+  width: 540px; }
+#top #top-copy {
+  margin: 0 auto;
+  font-size: 2em; }
+  #top #top-copy p {
+    text-align: center; }
+#top #top-info {
+  padding: 8px;
+  float: right; }
+  #top #top-info p {
+    font-size: 16px;
+    margin-bottom: 4px;
+    text-align: right; }
+#top #top-city-img {
+  height: 100px;
+  background-image: url("../img/city.png"); }
+#top .constraint {
+  zoom: 1; }
+  #top .constraint:before, #top .constraint:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #top .constraint:after {
+    clear: both; }
+@media all and (max-width: 479px) {
   #top #top-copy {
-    margin: 0 auto;
-    font-size: 2em; }
-    #top #top-copy p {
-      text-align: center; }
+    font-size: 2em;
+    margin-bottom: 30px; }
   #top #top-info {
+    margin-right: 20px;
+    margin-bottom: 10px; } }
+@media all and (min-width: 768px) {
+  #top #top-img {
+    margin-left: 0px;
+    float: left; }
+  #top #top-copy {
+    margin-top: 300px;
+    float: left;
+    font-size: 30px;
+    padding: 8px; }
+    #top #top-copy p {
+      text-align: left;
+      margin-bottom: 6px; }
+  #top #top-info {
+    width: 254px px-2px;
+    float: left;
     padding: 8px;
-    float: right; }
+    margin-right: 0px; }
     #top #top-info p {
-      font-size: 16px;
-      margin-bottom: 4px;
-      text-align: right; }
-  #top #top-city-img {
-    height: 100px;
-    background-image: url("../img/city.png"); }
-  #top .constraint {
-    zoom: 1; }
-    #top .constraint:before, #top .constraint:after {
-      display: block;
-      height: 0;
-      visibility: hidden;
-      content: "\0020"; }
-    #top .constraint:after {
-      clear: both; }
+      text-align: left; } }
 
-  #nav {
-    background-color: #1f2020;
-    height: 70px; } }
+#nav {
+  background-color: #1f2020;
+  height: 70px; }
+
 /* smart */
 @media all and (max-width: 479px) {
   .constraint {
@@ -94,14 +120,7 @@ li {
     display: none; }
 
   .md {
-    display: block; }
-
-  #top #top-copy {
-    font-size: 2em;
-    margin-bottom: 30px; }
-  #top #top-info {
-    margin-right: 20px;
-    margin-bottom: 10px; } }
+    display: block; } }
 /* pc */
 @media all and (min-width: 768px) {
   .constraint {
@@ -115,25 +134,6 @@ li {
 
   #top.constraing > * {
     float: left; }
-
-  #top #top-img {
-    margin-left: 0px;
-    float: left; }
-  #top #top-copy {
-    margin-top: 300px;
-    float: left;
-    font-size: 30px;
-    padding: 8px; }
-    #top #top-copy p {
-      text-align: left;
-      margin-bottom: 6px; }
-  #top #top-info {
-    width: 254px px-2px;
-    float: left;
-    padding: 8px;
-    margin-right: 0px; }
-    #top #top-info p {
-      text-align: left; }
 
   #nav {
     background-color: #1f2020;

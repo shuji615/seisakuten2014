@@ -72,47 +72,87 @@ section {
 
 
 /* all */
-@media all {
-  #top {
+#top {
+  #top-img {
+    margin: 0 auto;
+    width: $elem-width * 2;
+    img {
+    }
+  }
+
+  #top-copy {
+    margin: 0 auto;
+    font-size: 2em;
+    p {
+      text-align: center;
+    }
+  }
+
+  #top-info {
+    padding: $padding;
+    float: right;
+    p {
+      font-size: 16px;
+      margin-bottom: 4px;
+      text-align: right;
+    }
+  }
+
+  #top-city-img {
+    height: 100px;
+    background-image: url("../img/city.png");
+  }
+
+  .constraint {
+    @include clearfix;
+  }
+
+  @media all and (max-width: 479px) {
+    #top-copy {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    #top-info {
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+
+  @media all and (min-width: 768px) {
     #top-img {
-      margin: 0 auto;
-      width: $elem-width * 2;
+      margin-left: 0px;
+      float: left;
       img {
       }
     }
 
     #top-copy {
-      margin: 0 auto;
-      font-size: 2em;
+      margin-top: 300px;
+      float: left;
+      font-size: 30px;
+      padding: $padding;
       p {
-        text-align: center;
+        text-align: left;
+        margin-bottom: 6px;
       }
     }
 
     #top-info {
+      width:($elem-width) - ($padding * 2)px - 2px;
+      float: left;
       padding: $padding;
-      float: right;
-      p {
-        font-size: 16px;
-        margin-bottom: 4px;
-        text-align: right;
-      }
-    }
-
-    #top-city-img {
-      height: 100px;
-      background-image: url("../img/city.png");
-    }
-
-    .constraint {
-      @include clearfix;
+      margin-right: 0px;
+      p { text-align: left; }
     }
   }
+}
 
-  #nav {
-    background-color: $black;
-    height: 70px;
-  }
+#nav {
+  background-color: $black;
+  height: 70px;
 }
 
 
@@ -165,14 +205,6 @@ section {
     display: block;
   }
   #top {
-    #top-copy {
-      font-size: 2em;
-      margin-bottom: 30px;
-    }
-    #top-info {
-      margin-right: 20px;
-      margin-bottom: 10px;
-    }
   }
 }
 
@@ -196,31 +228,6 @@ section {
   }
 
   #top {
-    #top-img {
-      margin-left: 0px;
-      float: left;
-      img {
-      }
-    }
-
-    #top-copy {
-      margin-top: 300px;
-      float: left;
-      font-size: 30px;
-      padding: $padding;
-      p {
-        text-align: left;
-        margin-bottom: 6px;
-      }
-    }
-
-    #top-info {
-      width:($elem-width) - ($padding * 2)px - 2px;
-      float: left;
-      padding: $padding;
-      margin-right: 0px;
-      p { text-align: left; }
-    }
   }
 
   #nav {
