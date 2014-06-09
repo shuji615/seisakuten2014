@@ -30,6 +30,7 @@
 // ======
 
 $white: #FFFFFF;
+$lightgray: #efefef;
 $gray: #E3E3E3;
 $black: #1F2020;
 
@@ -144,7 +145,6 @@ section {
     img {
     }
   }
-
   #top-copy {
     margin: 0 auto;
     font-size: 2em;
@@ -152,7 +152,6 @@ section {
       text-align: center;
     }
   }
-
   #top-info {
     padding: $padding;
     float: right;
@@ -162,16 +161,13 @@ section {
       text-align: right;
     }
   }
-
   #top-city-img {
     height: 100px;
     background-image: url("../img/city.png");
   }
-
   .constraint {
     @include clearfix;
   }
-
   @media all and (max-width: 479px) {
     #top-img {
       margin-bottom: 30px;
@@ -181,7 +177,9 @@ section {
     }
     #top-copy {
       margin-bottom: 20px;
-      font-size: 18px;
+      p {
+        font-size: 18px;
+      }
     }
     #top-info {
       padding: 0px;
@@ -198,10 +196,8 @@ section {
       margin-bottom: 10px;
     }
   }
-
   @media all and (min-width: 480px) and (max-width: 767px) {
   }
-
   @media all and (min-width: 768px) {
     #top-img {
       margin-left: 0px;
@@ -209,7 +205,6 @@ section {
       img {
       }
     }
-
     #top-copy {
       margin-top: 300px;
       float: left;
@@ -220,7 +215,6 @@ section {
         margin-bottom: 6px;
       }
     }
-
     #top-info {
       width:($elem-width) - ($padding * 2)px - 2px;
       float: left;
@@ -233,8 +227,54 @@ section {
 
 #nav {
   background-color: $black;
-  height: 70px;
+  height: 80px;
+  #nav-logo {
+    float: left;
+    width: 134px;
+    @include clearfix;
+  }
+  #nav-link {
+    float: right;
+    ul {
+      float: left;
+    }
+    li {
+      float: left;
+      padding-top: 30px;
+      margin-left: 20px;
+      a {
+        padding: 4px;
+        font-size: 16px;
+        text-align: center;
+        color: $lightgray;
+        border-bottom: solid 3px $lightgray;
+      }
+    }
+    @include clearfix;
+  }
+  @include clearfix;
+
   @media all and (max-width: 479px) {
+    #nav-logo {
+      width: 90px;
+    }
+    #nav-link {
+      ul {
+        float: none;
+      }
+      li {
+        float: left;
+        padding-top: 14px;
+        margin-left: 10px;
+        a {
+          padding: 2px;
+          font-size: 10px;
+          text-align: center;
+          color: $lightgray;
+          border-bottom: solid 2px $lightgray;
+        }
+      }
+    }
   }
   @media all and (min-width: 480px) and (max-width: 767px) {
   }
@@ -305,7 +345,7 @@ section {
           margin-left: 12px;
           margin-bottom: 8px;
           font-size: 14px;
-          color: #efefef;
+          color: $lightgray;
         }
         .work-title {
           padding-top: 10px;

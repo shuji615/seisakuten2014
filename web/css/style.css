@@ -105,8 +105,9 @@ li {
     #top #top-img img {
       width: 270px; }
   #top #top-copy {
-    margin-bottom: 20px;
-    font-size: 18px; }
+    margin-bottom: 20px; }
+    #top #top-copy p {
+      font-size: 18px; }
   #top #top-info {
     padding: 0px; }
     #top #top-info p {
@@ -139,7 +140,63 @@ li {
 
 #nav {
   background-color: #1f2020;
-  height: 70px; }
+  height: 80px;
+  zoom: 1; }
+  #nav #nav-logo {
+    float: left;
+    width: 134px;
+    zoom: 1; }
+    #nav #nav-logo:before, #nav #nav-logo:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #nav #nav-logo:after {
+      clear: both; }
+  #nav #nav-link {
+    float: right;
+    zoom: 1; }
+    #nav #nav-link ul {
+      float: left; }
+    #nav #nav-link li {
+      float: left;
+      padding-top: 30px;
+      margin-left: 20px; }
+      #nav #nav-link li a {
+        padding: 4px;
+        font-size: 16px;
+        text-align: center;
+        color: #efefef;
+        border-bottom: solid 3px #efefef; }
+    #nav #nav-link:before, #nav #nav-link:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #nav #nav-link:after {
+      clear: both; }
+  #nav:before, #nav:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #nav:after {
+    clear: both; }
+  @media all and (max-width: 479px) {
+    #nav #nav-logo {
+      width: 90px; }
+    #nav #nav-link ul {
+      float: none; }
+    #nav #nav-link li {
+      float: left;
+      padding-top: 14px;
+      margin-left: 10px; }
+      #nav #nav-link li a {
+        padding: 2px;
+        font-size: 10px;
+        text-align: center;
+        color: #efefef;
+        border-bottom: solid 2px #efefef; } }
 
 #gallery {
   padding-top: 1px;
