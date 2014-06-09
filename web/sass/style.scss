@@ -23,10 +23,7 @@
 
 $white: #FFFFFF;
 $gray: #E3E3E3;
-$red: #C7243A;
-$yellow: #EDAD0B;
-$blue: #0086AB;
-$green: #5EC84E;
+$black: #1F2020;
 
 $padding: 8px;
 $elem-width: 270px;
@@ -60,11 +57,20 @@ section {
 }
 
 
-// ============
-//   Base
-// ============
+/* base */
+#top {
+  #top-img {
+    margin: 0 auto;
+    width: $elem-width * 2;
+    img {
+    }
+  }
+}
 
-
+#nav {
+  background-color: $black;
+  height: 70px;
+}
 
 
 /* smart */

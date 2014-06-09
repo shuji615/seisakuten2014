@@ -17,6 +17,15 @@ li {
 .constraint {
   margin: 0 auto; }
 
+/* base */
+#top #top-img {
+  margin: 0 auto;
+  width: 540px; }
+
+#nav {
+  background-color: #1f2020;
+  height: 70px; }
+
 /* smart */
 @media all and (max-width: 479px) {
   .constraint {
