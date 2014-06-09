@@ -143,6 +143,12 @@ li {
   background-color: #1f2020;
   height: 80px;
   zoom: 1; }
+  #nav.stick-to-top {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    margin: 0 auto;
+    z-index: 1; }
   #nav #nav-logo {
     float: left;
     width: 134px; }
@@ -193,6 +199,11 @@ li {
         text-align: center;
         color: #efefef;
         border-bottom: solid 2px #efefef; } }
+
+#nav-alt {
+  height: 80px; }
+  #nav-alt.hidden {
+    display: none; }
 
 #gallery {
   padding-top: 1px;

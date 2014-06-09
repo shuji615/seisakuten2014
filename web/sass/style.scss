@@ -229,6 +229,14 @@ section {
 #nav {
   background-color: $black;
   height: 80px;
+
+  &.stick-to-top {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    margin: 0 auto;
+    z-index: 1;
+  }
   #nav-logo {
     float: left;
     width: 134px;
@@ -283,6 +291,13 @@ section {
   @media all and (min-width: 480px) and (max-width: 767px) {
   }
   @media all and (min-width: 768px) {
+  }
+}
+
+#nav-alt {
+  height: 80px;
+  &.hidden {
+    display: none;
   }
 }
 
