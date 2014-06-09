@@ -1,5 +1,13 @@
 @charset 'utf-8';
 
+// media querys
+  @media all and (max-width: 479px) {
+  }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
+  }
+
 @mixin clearfix {
   zoom: 1;
   &:before,
@@ -27,6 +35,11 @@ $black: #1F2020;
 
 $padding: 8px;
 $elem-width: 270px;
+
+// macro
+// $sm-size: (max-width: 479px);
+// $md-size: ((min-width: 480px) and (max-width: 767px));
+// $lg-size: (min-width: 768px);
 
 .red {
   background-color: #00f;
@@ -70,8 +83,42 @@ section {
   margin: 0 auto;
 }
 
+@media all and (max-width: 479px) {
+  .constraint {
+    width: $elem-width;
+  }
+  .md, .lg{
+    display: none;
+  }
+  .sm {
+    display: block;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .constraint {
+    width: $elem-width * 2;
+  }
+  .sm, .lg{
+    display: none;
+  }
+  .md {
+    display: block;
+  }
+}
+@media all and (min-width: 768px) {
+  .constraint {
+    width: $elem-width * 3;
+  }
+  .sm, .md{
+    display: none;
+  }
+  .lg {
+    display: block;
+  }
+}
 
-/* all */
+/* local */
+
 #top {
   #top-img {
     margin: 0 auto;
@@ -108,6 +155,22 @@ section {
   }
 
   @media all and (max-width: 479px) {
+    #top-img {
+      margin-bottom: 30px;
+      img {
+        width: $elem-width;
+      }
+    }
+    #top-copy {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    #top-info {
+      padding: 0px;
+      p {
+        font-size: 12px;
+      }
+    }
     #top-copy {
       font-size: 2em;
       margin-bottom: 30px;
@@ -153,86 +216,11 @@ section {
 #nav {
   background-color: $black;
   height: 70px;
-}
-
-
-/* smart */
-
-@media all and (max-width: 479px) {
-  .constraint {
-    width: $elem-width;
+  @media all and (max-width: 479px) {
   }
-
-  .md, .lg{
-    display: none;
+  @media all and (min-width: 480px) and (max-width: 767px) {
   }
-
-  .sm {
-    display: block;
-  }
-
-  #top {
-    #top-img {
-      margin-bottom: 30px;
-      img {
-        width: $elem-width;
-      }
-    }
-    #top-copy {
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-    #top-info {
-      padding: 0px;
-      p {
-        font-size: 12px;
-      }
-    }
-  }
-}
-
-/* tablet */
-
-@media all and (min-width: 480px) and (max-width: 767px) {
-  .constraint {
-    width: $elem-width * 2;
-  }
-  .sm, .lg{
-    display: none;
-  }
-
-  .md {
-    display: block;
-  }
-  #top {
-  }
-}
-
-/* pc */
-
-@media all and (min-width: 768px) {
-  .constraint {
-    width: $elem-width * 3;
-  }
-
-  .sm, .md{
-    display: none;
-  }
-
-  .lg {
-    display: block;
-  }
-
-  #top.constraing>* {
-    float: left;
-  }
-
-  #top {
-  }
-
-  #nav {
-    background-color: $black;
-    height: 70px;
+  @media all and (min-width: 768px) {
   }
 }
 
