@@ -83,6 +83,24 @@ section {
   margin: 0 auto;
 }
 
+.title {
+  margin-top: 40px;
+  padding: $padding;
+  p {
+    font-size: 24px;
+  }
+}
+
+.subtitle {
+  width: 100px;
+  padding: $padding;
+  border-bottom: solid 3px $black;
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
 @media all and (max-width: 479px) {
   .constraint {
     width: $elem-width;
@@ -224,3 +242,116 @@ section {
   }
 }
 
+#intro {
+
+  @media all and (max-width: 479px) {
+  }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
+  }
+}
+
+#gallery {
+  padding-top: 1px;
+  background-color: $gray;
+  $gallery-elem-padding: 12px;
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    margin-left: $gallery-elem-padding;
+    margin-bottom: 30px;
+  }
+
+  #gallery-works {
+    margin-bottom: 40px;
+    @include clearfix;
+  }
+
+  #gallery-making {
+    @include clearfix;
+  }
+
+  li {
+    float: left;
+  }
+
+  .work-elem {
+    margin-bottom: 30px;
+    width: ($elem-width);
+    $work-img-width: ($elem-width) - 40px;
+    .work-img {
+      margin-left: (($elem-width) - ($work-img-width)) * 0.5;
+      width: $work-img-width;
+      height: $work-img-width * 0.75;
+      overflow: hidden;
+      border-radius: 8px;
+      img {
+        width: $work-img-width;
+        height: $work-img-width * 0.75;
+        border-radius: 8px;
+      }
+      .work-description {
+        $height: 60px;
+        height: $height;
+        position: relative;
+        border-radius: 8px;
+        top: -($height);
+        background-color: rgba(0, 0, 0, 0.35);
+        p {
+          margin-left: 12px;
+          margin-bottom: 8px;
+          font-size: 14px;
+          color: #efefef;
+        }
+        .work-title {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  .making-elem {
+    width: ($elem-width);
+    bottom: 0px;
+    padding: 20px 0px;
+    $making-elem-width: ($elem-width) - 70px;
+    img {
+      width: $making-elem-width;
+      height: $making-elem-width * 0.75;
+      margin-left: (($elem-width) - ($making-elem-width)) * 0.5;
+      border-radius: 8px;
+    }
+  }
+
+
+  @media all and (max-width: 479px) {
+  }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
+  }
+}
+
+#staff {
+
+  @media all and (max-width: 479px) {
+  }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
+  }
+}
+
+#footer {
+
+  @media all and (max-width: 479px) {
+  }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
+  }
+}
