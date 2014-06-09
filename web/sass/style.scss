@@ -1,5 +1,13 @@
 @charset 'utf-8';
 
+// media querys
+  @media all and (max-width: 479px) {
+  }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
+  }
+
 @mixin clearfix {
   zoom: 1;
   &:before,
@@ -27,6 +35,11 @@ $black: #1F2020;
 
 $padding: 8px;
 $elem-width: 270px;
+
+// macro
+// $sm-size: (max-width: 479px);
+// $md-size: ((min-width: 480px) and (max-width: 767px));
+// $lg-size: (min-width: 768px);
 
 .red {
   background-color: #00f;
@@ -70,68 +83,78 @@ section {
   margin: 0 auto;
 }
 
-
-/* all */
-@media all {
-  #top {
-    #top-img {
-      margin: 0 auto;
-      width: $elem-width * 2;
-      img {
-      }
-    }
-
-    #top-copy {
-      margin: 0 auto;
-      font-size: 2em;
-      p {
-        text-align: center;
-      }
-    }
-
-    #top-info {
-      padding: $padding;
-      float: right;
-      p {
-        font-size: 16px;
-        margin-bottom: 4px;
-        text-align: right;
-      }
-    }
-
-    #top-city-img {
-      height: 100px;
-      background-image: url("../img/city.png");
-    }
-
-    .constraint {
-      @include clearfix;
-    }
-  }
-
-  #nav {
-    background-color: $black;
-    height: 70px;
-  }
-}
-
-
-/* smart */
-
 @media all and (max-width: 479px) {
   .constraint {
     width: $elem-width;
   }
-
   .md, .lg{
     display: none;
   }
-
   .sm {
     display: block;
   }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .constraint {
+    width: $elem-width * 2;
+  }
+  .sm, .lg{
+    display: none;
+  }
+  .md {
+    display: block;
+  }
+}
+@media all and (min-width: 768px) {
+  .constraint {
+    width: $elem-width * 3;
+  }
+  .sm, .md{
+    display: none;
+  }
+  .lg {
+    display: block;
+  }
+}
 
-  #top {
+/* local */
+
+#top {
+  #top-img {
+    margin: 0 auto;
+    width: $elem-width * 2;
+    img {
+    }
+  }
+
+  #top-copy {
+    margin: 0 auto;
+    font-size: 2em;
+    p {
+      text-align: center;
+    }
+  }
+
+  #top-info {
+    padding: $padding;
+    float: right;
+    p {
+      font-size: 16px;
+      margin-bottom: 4px;
+      text-align: right;
+    }
+  }
+
+  #top-city-img {
+    height: 100px;
+    background-image: url("../img/city.png");
+  }
+
+  .constraint {
+    @include clearfix;
+  }
+
+  @media all and (max-width: 479px) {
     #top-img {
       margin-bottom: 30px;
       img {
@@ -148,23 +171,6 @@ section {
         font-size: 12px;
       }
     }
-  }
-}
-
-/* tablet */
-
-@media all and (min-width: 480px) and (max-width: 767px) {
-  .constraint {
-    width: $elem-width * 2;
-  }
-  .sm, .lg{
-    display: none;
-  }
-
-  .md {
-    display: block;
-  }
-  #top {
     #top-copy {
       font-size: 2em;
       margin-bottom: 30px;
@@ -174,28 +180,11 @@ section {
       margin-bottom: 10px;
     }
   }
-}
 
-/* pc */
-
-@media all and (min-width: 768px) {
-  .constraint {
-    width: $elem-width * 3;
+  @media all and (min-width: 480px) and (max-width: 767px) {
   }
 
-  .sm, .md{
-    display: none;
-  }
-
-  .lg {
-    display: block;
-  }
-
-  #top.constraing>* {
-    float: left;
-  }
-
-  #top {
+  @media all and (min-width: 768px) {
     #top-img {
       margin-left: 0px;
       float: left;
@@ -222,10 +211,16 @@ section {
       p { text-align: left; }
     }
   }
+}
 
-  #nav {
-    background-color: $black;
-    height: 70px;
+#nav {
+  background-color: $black;
+  height: 70px;
+  @media all and (max-width: 479px) {
+  }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
   }
 }
 
