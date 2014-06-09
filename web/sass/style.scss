@@ -40,9 +40,7 @@ $elem-width: 270px;
   background-color: #f00;
 }
 
-// ========
-// contents
-// ========
+/* global */
 
 body {
   background-color: #fff;
@@ -51,6 +49,10 @@ body {
   font-weight: normal;
   font-weight: 400;
   color: #444;
+}
+
+p {
+  color: black;
 }
 
 a {
@@ -69,40 +71,48 @@ section {
 }
 
 
-/* base */
-#top {
-  #top-img {
-    margin: 0 auto;
-    width: $elem-width * 2;
-    img {
+/* all */
+@media all {
+  #top {
+    #top-img {
+      margin: 0 auto;
+      width: $elem-width * 2;
+      img {
+      }
+    }
+
+    #top-copy {
+      margin: 0 auto;
+      font-size: 2em;
+      p {
+        text-align: center;
+      }
+    }
+
+    #top-info {
+      padding: $padding;
+      float: right;
+      p {
+        font-size: 16px;
+        margin-bottom: 4px;
+        text-align: right;
+      }
+    }
+
+    #top-city-img {
+      height: 100px;
+      background-image: url("../img/city.png");
+    }
+
+    .constraint {
+      @include clearfix;
     }
   }
 
-  #top-info {
-    padding: $padding;
-    border-left: solid 2px $black;
-    float: right;
-    margin-right: 100px;
-    p {
-      color: $black;
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
+  #nav {
+    background-color: $black;
+    height: 70px;
   }
-
-  #top-city-img {
-    height: 100px;
-    background-image: url("../img/city.png");
-  }
-
-  .constraint {
-    @include clearfix;
-  }
-}
-
-#nav {
-  background-color: $black;
-  height: 70px;
 }
 
 
@@ -112,6 +122,33 @@ section {
   .constraint {
     width: $elem-width;
   }
+
+  .md, .lg{
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+
+  #top {
+    #top-img {
+      margin-bottom: 30px;
+      img {
+        width: $elem-width;
+      }
+    }
+    #top-copy {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    #top-info {
+      padding: 0px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 /* tablet */
@@ -120,6 +157,23 @@ section {
   .constraint {
     width: $elem-width * 2;
   }
+  .sm, .lg{
+    display: none;
+  }
+
+  .md {
+    display: block;
+  }
+  #top {
+    #top-copy {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    #top-info {
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 /* pc */
@@ -127,6 +181,14 @@ section {
 @media all and (min-width: 768px) {
   .constraint {
     width: $elem-width * 3;
+  }
+
+  .sm, .md{
+    display: none;
+  }
+
+  .lg {
+    display: block;
   }
 
   #top.constraing>* {
@@ -141,11 +203,23 @@ section {
       }
     }
 
+    #top-copy {
+      margin-top: 300px;
+      float: left;
+      font-size: 30px;
+      padding: $padding;
+      p {
+        text-align: left;
+        margin-bottom: 6px;
+      }
+    }
+
     #top-info {
       width:($elem-width) - ($padding * 2)px - 2px;
       float: left;
       padding: $padding;
       margin-right: 0px;
+      p { text-align: left; }
     }
   }
 
