@@ -232,7 +232,10 @@ section {
   #nav-logo {
     float: left;
     width: 134px;
-    @include clearfix;
+    img {
+      width: 134px;
+      height: 80px;
+    }
   }
   #nav-link {
     float: right;

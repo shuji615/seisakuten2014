@@ -145,15 +145,10 @@ li {
   zoom: 1; }
   #nav #nav-logo {
     float: left;
-    width: 134px;
-    zoom: 1; }
-    #nav #nav-logo:before, #nav #nav-logo:after {
-      display: block;
-      height: 0;
-      visibility: hidden;
-      content: "\0020"; }
-    #nav #nav-logo:after {
-      clear: both; }
+    width: 134px; }
+    #nav #nav-logo img {
+      width: 134px;
+      height: 80px; }
   #nav #nav-link {
     float: right;
     zoom: 1; }
