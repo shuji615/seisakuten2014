@@ -207,7 +207,7 @@ li {
 
 #gallery {
   padding-top: 1px;
-  background-color: #e3e3e3; }
+  background-color: #f8f8f8; }
   #gallery .title {
     margin-bottom: 20px; }
   #gallery .subtitle {
@@ -273,3 +273,7 @@ li {
         width: 230px;
         height: 172.5px;
         border-radius: 8px; }
+
+#footer {
+  background-color: #1f2020;
+  height: 200px; }

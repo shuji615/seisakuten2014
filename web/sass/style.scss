@@ -30,8 +30,8 @@
 // ======
 
 $white: #FFFFFF;
-$lightgray: #efefef;
-$gray: #E3E3E3;
+$darkgray: #efefef;
+$lightgray: #f8f8f8;
 $black: #1F2020;
 
 $padding: 8px;
@@ -258,8 +258,8 @@ section {
         padding: 4px;
         font-size: 16px;
         text-align: center;
-        color: $lightgray;
-        border-bottom: solid 3px $lightgray;
+        color: $darkgray;
+        border-bottom: solid 3px $darkgray;
       }
     }
     @include clearfix;
@@ -282,8 +282,8 @@ section {
           padding: 2px;
           font-size: 10px;
           text-align: center;
-          color: $lightgray;
-          border-bottom: solid 2px $lightgray;
+          color: $darkgray;
+          border-bottom: solid 2px $darkgray;
         }
       }
     }
@@ -313,7 +313,7 @@ section {
 
 #gallery {
   padding-top: 1px;
-  background-color: $gray;
+  background-color: $lightgray;
   $gallery-elem-padding: 12px;
 
   .title {
@@ -364,7 +364,7 @@ section {
           margin-left: 12px;
           margin-bottom: 8px;
           font-size: 14px;
-          color: $lightgray;
+          color: $darkgray;
         }
         .work-title {
           padding-top: 10px;
@@ -411,6 +411,8 @@ section {
 }
 
 #footer {
+  background-color: $black;
+  height: 200px;
 
   @media all and (max-width: 479px) {
   }
