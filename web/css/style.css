@@ -101,6 +101,7 @@ li {
     clear: both; }
 @media all and (max-width: 479px) {
   #top #top-img {
+    width: 270px;
     margin-bottom: 30px; }
     #top #top-img img {
       width: 270px; }

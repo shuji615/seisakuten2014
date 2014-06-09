@@ -170,6 +170,7 @@ section {
   }
   @media all and (max-width: 479px) {
     #top-img {
+      width: $elem-width;
       margin-bottom: 30px;
       img {
         width: $elem-width;
