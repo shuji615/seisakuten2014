@@ -337,7 +337,6 @@ section {
         width:  $img-width;
         height: $img-width;
       }
-      @include clearfix;
     }
     @include clearfix;
   }
@@ -345,6 +344,38 @@ section {
   @media all and (max-width: 479px) {
   }
   @media all and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    .text-container {
+      width: $elem-width;
+      &>div {
+        margin-left: 80px;
+      }
+      .about {
+        width: $elem-width;
+        margin-bottom: 30px;
+        border-left: solid 2px $black;
+        padding: $padding 0;
+        p.name {
+          margin-left: 30px;
+          margin-bottom: 30px;
+          font-size: 2em;
+        }
+        p {
+          margin-bottom: 8px;
+          margin-left: 40px;
+        }
+      }
+    }
+    .img-container {
+      width: $elem-width;
+      $img-width: ($elem-width) - 10px;
+      img {
+        width:  $img-width;
+        height: $img-width;
+      }
+    }
+    @include clearfix;
+  }
   }
   @media all and (min-width: 768px) {
   }
