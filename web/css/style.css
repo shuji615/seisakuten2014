@@ -197,11 +197,15 @@ li {
         #gallery .work-elem .work-img .work-description .work-title {
           padding-top: 10px; }
   #gallery .making-elem {
-    width: 270px;
-    bottom: 0px;
-    padding: 20px 0px; }
+    margin-bottom: 30px;
+    width: 270px; }
     #gallery .making-elem img {
-      width: 200px;
-      height: 150px;
-      margin-left: 35px;
+      margin-left: 20px;
+      width: 230px;
+      height: 172.5px;
+      overflow: hidden;
       border-radius: 8px; }
+      #gallery .making-elem img img {
+        width: 230px;
+        height: 172.5px;
+        border-radius: 8px; }

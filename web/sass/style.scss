@@ -315,15 +315,20 @@ section {
   }
 
   .making-elem {
+    margin-bottom: 30px;
     width: ($elem-width);
-    bottom: 0px;
-    padding: 20px 0px;
-    $making-elem-width: ($elem-width) - 70px;
+    $work-img-width: ($elem-width) - 40px;
     img {
-      width: $making-elem-width;
-      height: $making-elem-width * 0.75;
-      margin-left: (($elem-width) - ($making-elem-width)) * 0.5;
+      margin-left: (($elem-width) - ($work-img-width)) * 0.5;
+      width: $work-img-width;
+      height: $work-img-width * 0.75;
+      overflow: hidden;
       border-radius: 8px;
+      img {
+        width: $work-img-width;
+        height: $work-img-width * 0.75;
+        border-radius: 8px;
+      }
     }
   }
 
