@@ -11,6 +11,15 @@ var main = {
   },
 };
 
+main.sections = [
+  '#top',
+  '#nav',
+  '#intro',
+  '#gallery',
+  '#staff',
+  '#footer',
+];
+
 main.scroll = {
   init: function() {
     // var WIDTH = $(window).width();
@@ -26,6 +35,23 @@ main.scroll = {
       }
     });
   },
+  to: function (section) {
+    var top = 0;
+    var found = false;
+    for (var i = 0, l = main.sections.length; i < l; i++) {
+      var _section = main.sections[i];
+      if (_section == section) {
+        found = true;
+        break;
+      }
+      top += $(_section).height();
+      if (_section == "#nav") top -= $(_section).height();
+    }
+    if (!found) {
+      return;
+    }
+    $('html, body').animate({ scrollTop: top}, 'fast');
+  },
 };
 
 main.top = {
@@ -36,7 +62,22 @@ main.top = {
 
 main.nav = {
   init: function () {
-
+    $('#top-link').click(function(e){
+      e.preventDefault();
+      main.scroll.to("#top")
+    });
+    $('#intro-link').click(function(e){
+      e.preventDefault();
+      main.scroll.to("#intro")
+    });
+    $('#gallery-link').click(function(e){
+      e.preventDefault();
+      main.scroll.to("#gallery")
+    });
+    $('#staff-link').click(function(e){
+      e.preventDefault();
+      main.scroll.to("#staff")
+    });
   },
 };
 
