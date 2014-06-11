@@ -12,7 +12,7 @@ var ImgRotate = function() {
                 cosDeg = Math.cos(angle * Math.PI / 180);
                 sinDeg = Math.sin(angle * Math.PI / 180);
                 with(target.filters.item(0)) {
-                    M11 = M22 = cosDeg; M12 = -(M21 = sinDeg); 
+                    M11 = M22 = cosDeg; M12 = -(M21 = sinDeg);
                 }
                 target.style.top = (orginH - target.offsetHeight) / 2 + 'px';
                 target.style.left = (orginW - target.offsetWidth) / 2 + 'px';
@@ -26,21 +26,18 @@ var ImgRotate = function() {
                 target.style.transform = "rotate(" + angle + "deg)";
             }
         }
-        
+
         timer = setInterval(function() {
             i += 1;
             run(i);
             //if (i > degree - 1) {
             //     i = 0;
             //    clearInterval(timer);
-            //} 
-        }, 10); 
+            //}
+        }, 10);
     }
     return {rotate: rotate}
 }();
-$(document).ready(function() {
-    ImgRotate.rotate('top-img', 360);
-});
 
 var main = {
   init: function() {
@@ -79,7 +76,7 @@ main.scroll = {
 
 main.top = {
   init: function() {
-
+    ImgRotate.rotate('top-img', 360);
   },
 };
 
@@ -106,11 +103,9 @@ main.nav = {
 
 main.gallery = {
   init: function () {
-    $(document).ready(function() {
-      $(".fancybox").fancybox({
-        openEffect  : 'none',
-        closeEffect : 'none'
-      });
+    $(".fancybox").fancybox({
+      openEffect  : 'none',
+      closeEffect : 'none'
     });
   },
 };
