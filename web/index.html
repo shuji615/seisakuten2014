@@ -12,6 +12,9 @@
   <!--[if IE]> <script type="text/javascript" src="excanvas.js"></script> <![endif]-->
   <link href='css/style.css' rel='stylesheet' type='text/css'>
   <script src='js/jquery-2.1.0.min.js'></script>
+  <!-- Add fancyBox -->
+  <link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js"></script>
   <script src='js/main.js'></script>
 </head>
 <body>
@@ -39,8 +42,33 @@
     <div id='top-city-img'></div>
   </section>
   <section id='nav'>
-    <div class='constraint'></div>
+    <div class='constraint'>
+      <div id='nav-logo'>
+        <a href='#' id='top-link'>
+          <img src='img/logo-min.png'>
+        </a>
+      </div>
+      <div id='nav-link'>
+        <ul>
+          <li>
+            <a href='#' id='intro-link'>ご挨拶</a>
+          </li>
+          <li>
+            <a href='#' id='gallery-link'>ギャラリー</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href='#' id='staff-link'>スタッフ</a>
+          </li>
+          <li>
+            <a href='#' id='access-link'>アクセス</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
+  <div class='hidden' id='nav-alt'></div>
   <section id='intro'>
     <div class='constraint'>
       <div class='title'>
@@ -60,7 +88,7 @@
       <div id='gallery-works'>
         <ul>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>
@@ -77,7 +105,7 @@
             </a>
           </li>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>
@@ -94,7 +122,7 @@
             </a>
           </li>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>
@@ -111,7 +139,7 @@
             </a>
           </li>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>
@@ -128,7 +156,7 @@
             </a>
           </li>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>
@@ -145,7 +173,7 @@
             </a>
           </li>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>
@@ -162,7 +190,7 @@
             </a>
           </li>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>
@@ -179,7 +207,7 @@
             </a>
           </li>
           <li>
-            <a href=''>
+            <a class="fancybox" rel="gallery1">
               <div class='work-elem'>
                 <div class='work-img'>
                   <img alt='作品名' src='img/work.png'>

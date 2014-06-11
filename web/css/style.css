@@ -101,12 +101,14 @@ li {
     clear: both; }
 @media all and (max-width: 479px) {
   #top #top-img {
+    width: 270px;
     margin-bottom: 30px; }
     #top #top-img img {
       width: 270px; }
   #top #top-copy {
-    margin-bottom: 20px;
-    font-size: 18px; }
+    margin-bottom: 20px; }
+    #top #top-copy p {
+      font-size: 18px; }
   #top #top-info {
     padding: 0px; }
     #top #top-info p {
@@ -139,11 +141,73 @@ li {
 
 #nav {
   background-color: #1f2020;
-  height: 70px; }
+  height: 80px;
+  zoom: 1; }
+  #nav.stick-to-top {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    margin: 0 auto;
+    z-index: 1; }
+  #nav #nav-logo {
+    float: left;
+    width: 134px; }
+    #nav #nav-logo img {
+      width: 134px;
+      height: 80px; }
+  #nav #nav-link {
+    float: right;
+    zoom: 1; }
+    #nav #nav-link ul {
+      float: left; }
+    #nav #nav-link li {
+      float: left;
+      padding-top: 30px;
+      margin-left: 20px; }
+      #nav #nav-link li a {
+        padding: 4px;
+        font-size: 16px;
+        text-align: center;
+        color: #efefef;
+        border-bottom: solid 3px #efefef; }
+    #nav #nav-link:before, #nav #nav-link:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #nav #nav-link:after {
+      clear: both; }
+  #nav:before, #nav:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #nav:after {
+    clear: both; }
+  @media all and (max-width: 479px) {
+    #nav #nav-logo {
+      width: 90px; }
+    #nav #nav-link ul {
+      float: none; }
+    #nav #nav-link li {
+      float: left;
+      padding-top: 14px;
+      margin-left: 10px; }
+      #nav #nav-link li a {
+        padding: 2px;
+        font-size: 10px;
+        text-align: center;
+        color: #efefef;
+        border-bottom: solid 2px #efefef; } }
+
+#nav-alt {
+  height: 80px; }
+  #nav-alt.hidden {
+    display: none; }
 
 #gallery {
   padding-top: 1px;
-  background-color: #e3e3e3; }
+  background-color: #f8f8f8; }
   #gallery .title {
     margin-bottom: 20px; }
   #gallery .subtitle {
@@ -209,3 +273,7 @@ li {
         width: 230px;
         height: 172.5px;
         border-radius: 8px; }
+
+#footer {
+  background-color: #1f2020;
+  height: 200px; }
