@@ -12,12 +12,15 @@
   /[if IE] <script type="text/javascript" src="excanvas.js"></script>
   %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
   %script{:src => "js/jquery-2.1.0.min.js"}
+  / Add fancyBox
+  %link{:href => "./fancybox/source/jquery.fancybox.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %script{:src => "./fancybox/source/jquery.fancybox.pack.js", :type => "text/javascript"}
   %script{:src => "js/main.js"}
 %body
   %section#top
     .constraint
       #top-img
-        %img{src: "img/top-img.png", alt: "東京大学制作展"}
+        %img{:alt => "東京大学制作展", :src => "img/top-img.png"}/
       #top-copy
         %p.sm.md リアルからちょっと離れてる空間
         %p.lg リアルから
@@ -28,35 +31,33 @@
         %p xx:xx ~ xx:xx (最終日はxx:xx ~ xx:xx)
         %p
           東京大学工学部2号館xxxx (
-          %a{href: '#'} Map
+          %a{:href => "#"} Map
           )
     #top-city-img
   %section#nav
     .constraint
       #nav-logo
-        %a#top-link{href: '#'}
-          %img{src: 'img/logo-min.png'}
+        %a#top-link{:href => "#"}
+          %img{:src => "img/logo-min.png"}/
       #nav-link
         %ul
           %li
-            %a#intro-link{href: '#'} ご挨拶
+            %a#intro-link{:href => "#"} ご挨拶
           %li
-            %a#gallery-link{href: '#'} ギャラリー
+            %a#gallery-link{:href => "#"} ギャラリー
         %ul
           %li
-            %a#staff-link{href: '#'} スタッフ
+            %a#staff-link{:href => "#"} スタッフ
           %li
-            %a#access-link{href: '#'} アクセス
+            %a#access-link{:href => "#"} アクセス
   #nav-alt.hidden
-
   %section#intro
     .constraint
       .title
         %p ご挨拶
-
       .container
         .img-container
-          %img{src: 'img/naemura-sensei.png'}
+          %img{:src => "img/naemura-sensei.png"}/
         .text-container
           .about
             %p.name お名前
@@ -65,10 +66,9 @@
             %p 役職
           .greeting
             %p あいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつ
-
       .container
         .img-container
-          %img{src: 'img/naemura-sensei.png'}
+          %img{:src => "img/naemura-sensei.png"}/
         .text-container
           .about
             %p.name お名前
@@ -77,7 +77,6 @@
             %p 役職
           .greeting
             %p あいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつあいさつ
-
   %section#gallery
     .constraint
       .title
@@ -87,111 +86,110 @@
       #gallery-works
         %ul
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
           %li
-            %a{href: "#{}"}
-              .work-elem
-                .work-img
-                  %img{src: "img/work.png", alt: "作品名"}
-                  .work-description
-                    .work-title
-                      %p 作品名
-                    .work-author
-                      %p 制作者
+            %a.fancybox{:rel => "gallery1"}
+            .work-elem
+              .work-img
+                %img{:alt => "作品名", :src => "img/work.png"}/
+                .work-description
+                  .work-title
+                    %p 作品名
+                  .work-author
+                    %p 制作者
       .subtitle
         %p メイキング
       #gallery-making
         %ul
           %li
             .making-elem
-              %img{src: "img/work.png", alt: "風景"}
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{src: "img/work.png", alt: "風景"}
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{src: "img/work.png", alt: "風景"}
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{src: "img/work.png", alt: "風景"}
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{src: "img/work.png", alt: "風景"}
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{src: "img/work.png", alt: "風景"}
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{src: "img/work.png", alt: "風景"}
-
+              %img{:alt => "風景", :src => "img/work.png"}/
   %section#staff
     .constraint
       .title
