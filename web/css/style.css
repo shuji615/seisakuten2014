@@ -52,7 +52,14 @@ li {
     display: none; }
 
   .sm {
-    display: block; } }
+    display: block; }
+
+  .title {
+    width: 270px;
+    text-align: center; }
+
+  .subtitle {
+    margin: 0 auto; } }
 @media all and (min-width: 480px) and (max-width: 767px) {
   .constraint {
     width: 540px; }
@@ -223,9 +230,6 @@ li {
         margin-left: 30px;
         margin-bottom: 30px;
         font-size: 2em; }
-      #intro .container .text-container .about p {
-        margin-bottom: 8px;
-        margin-left: 40px; }
   #intro .container:before, #intro .container:after {
     display: block;
     height: 0;
@@ -333,7 +337,6 @@ li {
   #gallery .title {
     margin-bottom: 20px; }
   #gallery .subtitle {
-    margin-left: 12px;
     margin-bottom: 30px; }
   #gallery #gallery-works {
     margin-bottom: 40px;
@@ -395,6 +398,12 @@ li {
         width: 230px;
         height: 172.5px;
         border-radius: 8px; }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    #gallery .subtitle {
+      margin-left: 12px; } }
+  @media all and (min-width: 768px) {
+    #gallery .subtitle {
+      margin-left: 12px; } }
 
 #footer {
   background-color: #1f2020;
