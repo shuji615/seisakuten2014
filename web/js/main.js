@@ -1,16 +1,10 @@
-var isRotate = true;
-var StartRorate = function () {
-    isRotate = true;
-}
-var StopRotate = function() {
-    isRotate = false;
-}
-var ImgRotate = function() {
+var ImgRotate = function(target) {
+    var isRotate = true;
     var T$ = function(id) { return document.getElementById(id); }
     var ua = navigator.userAgent,
         isIE = /msie/i.test(ua) && !window.Opera;
     var i = 0, sinDeg = 0, cosDeg = 0, timer = null ;
-    var rotate = function(target, degree) {
+    var rotate = function() {
         target = T$(target);
         var orginW = target.clientWidth, orginH = target.clientHeight;
             clearInterval(timer);
@@ -32,21 +26,24 @@ var ImgRotate = function() {
             } else {
                 target.style.transform = "rotate(" + angle + "deg)";
             }
-        }
+        };
 
         timer = setInterval(function() {
            if (isRotate){
               i += 0.1;
               run(i);
             }
-            //if (i > degree - 1) {
-            //     i = 0;
-            //    clearInterval(timer);
-            //}
         }, 10);
-    }
-    return {rotate: rotate}
-}();
+    };
+    var stop = function () {
+      clearInterval(timer);
+      timer = null;
+    };
+    return {
+      rotate: rotate,
+      stop: stop
+    };
+};
 
 var main = {
   init: function() {
@@ -85,7 +82,8 @@ main.scroll = {
 
 main.top = {
   init: function() {
-    ImgRotate.rotate('top-img-rotate', 360);
+    this.rotation = ImgRotate('top-img-rotate');
+    this.rotation.rotate();
   },
 };
 
