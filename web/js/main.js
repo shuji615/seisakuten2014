@@ -100,7 +100,7 @@ main.top = {
           timer = null;
           return;
         }
-        self.rotation.setSpeed(speed + 0.01);
+        self.rotation.setSpeed(speed + 0.05);
       } , 0.1);
     });
     $('#top-img').mouseout(function(){
@@ -115,6 +115,9 @@ main.top = {
         }
         self.rotation.setSpeed(speed - 0.05);
       } , 0.1);
+    });
+    $('#top-img').click(function(){
+      main.scroll.to('#intro');
     });
     this.rotation = ImgRotation('top-img-rotate');
     this.rotation.start(this.defaultRotationSpeed);
