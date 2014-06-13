@@ -536,6 +536,19 @@ section {
 }
 
 #staff {
+  .title {
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    margin-bottom: 20px;
+  }
+  li {
+    float: left;
+    width: $elem-width / 2;
+    margin-bottom: 20px;
+  }
+
+  @include clearfix;
 
   @media all and (max-width: 479px) {
   }

@@ -408,6 +408,24 @@ li {
     #gallery .subtitle {
       margin-left: 12px; } }
 
+#staff {
+  zoom: 1; }
+  #staff .title {
+    margin-bottom: 20px; }
+  #staff .subtitle {
+    margin-bottom: 20px; }
+  #staff li {
+    float: left;
+    width: 135px;
+    margin-bottom: 20px; }
+  #staff:before, #staff:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #staff:after {
+    clear: both; }
+
 #footer {
   background-color: #1f2020;
   height: 200px; }
