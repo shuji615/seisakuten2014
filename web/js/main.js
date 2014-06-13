@@ -4,8 +4,10 @@ var ImgRotation = function(argTarget) {
     var ua = navigator.userAgent,
         isIE = /msie/i.test(ua) && !window.Opera;
     var i = 0, sinDeg = 0, cosDeg = 0, timer = null ;
+    var speed;
     var target = T$(argTarget);
-    var start = function() {
+    var start = function(argSpeed) {
+        speed = argSpeed;
         var orginW = target.clientWidth, orginH = target.clientHeight;
             clearInterval(timer);
         function run(angle) {
@@ -30,7 +32,7 @@ var ImgRotation = function(argTarget) {
 
         timer = setInterval(function() {
            if (isRotate){
-              i += 0.1;
+              i += speed;
               run(i);
             }
         }, 10);
@@ -39,9 +41,13 @@ var ImgRotation = function(argTarget) {
       clearInterval(timer);
       timer = null;
     };
+    var getSpeed = function () {return speed};
+    var setSpeed = function (_speed) {speed = _speed;}
     return {
       start: start,
-      stop: stop
+      stop: stop,
+      getSpeed: getSpeed,
+      setSpeed: setSpeed,
     };
 };
 
@@ -81,14 +87,43 @@ main.scroll = {
 
 main.top = {
   init: function() {
+    var self = this;
+    this.defaultRotationSpeed = 0.1
+    var timer;
+    var maxSpeed = 5;
+    $('#top-img').mouseover(function(){
+      clearInterval(timer);
+      timer = setInterval(function () {
+        var speed = self.rotation.getSpeed();
+        if (maxSpeed < speed) {
+          clearInterval(timer);
+          timer = null;
+          return;
+        }
+        self.rotation.setSpeed(speed + 0.05);
+      } , 0.1);
+    });
+    $('#top-img').mouseout(function(){
+      clearInterval(timer);
+      timer = setInterval(function () {
+        var speed = self.rotation.getSpeed();
+        if (self.defaultRotationSpeed > speed) {
+          self.rotation.setSpeed(self.defaultRotationSpeed);
+          clearInterval(timer);
+          timer = null;
+          return;
+        }
+        self.rotation.setSpeed(speed - 0.05);
+      } , 0.1);
+    });
     this.rotation = ImgRotation('top-img-rotate');
-    this.rotation.start();
+    this.rotation.start(this.defaultRotationSpeed);
     this.offsetBottom = $('#nav').offset().top;
   },
   scroll: function(top) {
     if (top < this.offsetBottom) {
       if (!this.isAnimating) {
-        this.rotation.start();
+        this.rotation.start(this.defaultRotationSpeed);
         this.isAnimating = true;
         console.log('start');
       }

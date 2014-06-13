@@ -454,15 +454,17 @@ section {
 
 #gallery {
   padding-top: 1px;
-  background-color: #bdc3c7;
+  background-color: #3498db;
   $gallery-elem-padding: 12px;
-
+  p {
+    color: $lightgray;
+  }
   .title {
     margin-bottom: 20px;
   }
-
   .subtitle {
     margin-bottom: 30px;
+    border-bottom: 3px solid $lightgray;
   }
 
   #gallery-works {

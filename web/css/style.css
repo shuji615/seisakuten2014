@@ -343,11 +343,14 @@ li {
 
 #gallery {
   padding-top: 1px;
-  background-color: #bdc3c7; }
+  background-color: #3498db; }
+  #gallery p {
+    color: #efefef; }
   #gallery .title {
     margin-bottom: 20px; }
   #gallery .subtitle {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    border-bottom: 3px solid #efefef; }
   #gallery #gallery-works {
     margin-bottom: 40px;
     zoom: 1; }
