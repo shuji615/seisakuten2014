@@ -215,128 +215,135 @@ li {
   #nav-alt.hidden {
     display: none; }
 
-#intro .title {
-  margin-bottom: 40px; }
-#intro .container {
-  margin-bottom: 60px;
-  zoom: 1; }
-  #intro .container > div {
-    float: left; }
-  #intro .container .text-container {
-    width: 540px; }
-    #intro .container .text-container > div {
-      margin-left: 80px; }
-    #intro .container .text-container .about {
-      margin-bottom: 30px;
-      padding: 8px 0; }
-      #intro .container .text-container .about p.name {
-        margin-left: 30px;
-        margin-bottom: 30px;
-        font-size: 2em; }
-  #intro .container:before, #intro .container:after {
-    display: block;
-    height: 0;
-    visibility: hidden;
-    content: "\0020"; }
-  #intro .container:after {
-    clear: both; }
-@media all and (max-width: 479px) {
+#intro {
+  background-color: #2c3e50; }
+  #intro p {
+    color: #efefef;
+    line-height: 25px; }
+  #intro .title {
+    margin-bottom: 40px; }
   #intro .container {
+    padding-bottom: 60px;
     zoom: 1; }
-    #intro .container .img-container {
-      margin-left: 35px;
-      margin-bottom: 20px; }
-      #intro .container .img-container img {
-        width: 200px;
-        height: 200px; }
-    #intro .container .about {
-      margin-bottom: 10px;
-      padding: 8px 0; }
-      #intro .container .about p.name {
-        width: 270px;
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 1.5em; }
-      #intro .container .about p.prop {
+    #intro .container > div {
+      float: left; }
+    #intro .container .img-container img {
+      border-radius: 135px; }
+    #intro .container .text-container {
+      width: 540px; }
+      #intro .container .text-container > div {
+        margin-left: 80px; }
+      #intro .container .text-container .about {
+        margin-bottom: 30px;
+        padding: 8px 0; }
+        #intro .container .text-container .about p.name {
+          margin-left: 30px;
+          margin-bottom: 30px;
+          font-size: 2em; }
+    #intro .container:before, #intro .container:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #intro .container:after {
+      clear: both; }
+  @media all and (max-width: 479px) {
+    #intro .container {
+      zoom: 1; }
+      #intro .container .img-container {
         margin-left: 35px;
-        margin-bottom: 8px; }
-    #intro .container .greeting {
-      width: 270px; }
-    #intro .container:before, #intro .container:after {
-      display: block;
-      height: 0;
-      visibility: hidden;
-      content: "\0020"; }
-    #intro .container:after {
-      clear: both; } }
-@media all and (min-width: 480px) and (max-width: 767px) {
-  #intro .container {
-    zoom: 1; }
-    #intro .container .img-container {
-      margin-left: 67.5px;
-      margin-bottom: 40px; }
-      #intro .container .img-container img {
-        width: 200px;
-        height: 200px; }
-    #intro .container .about {
-      margin-bottom: 30px;
-      padding: 8px 0; }
-      #intro .container .about p.name {
-        margin-left: 30px;
+        margin-bottom: 20px; }
+        #intro .container .img-container img {
+          width: 200px;
+          height: 200px; }
+      #intro .container .about {
+        margin-bottom: 10px;
+        padding: 8px 0; }
+        #intro .container .about p.name {
+          width: 270px;
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 1.5em; }
+        #intro .container .about p.prop {
+          margin-left: 35px;
+          margin-bottom: 8px; }
+      #intro .container .greeting {
+        width: 270px; }
+      #intro .container:before, #intro .container:after {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        content: "\0020"; }
+      #intro .container:after {
+        clear: both; } }
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    #intro .container {
+      zoom: 1; }
+      #intro .container .img-container {
+        margin-left: 67.5px;
+        margin-bottom: 40px; }
+        #intro .container .img-container img {
+          width: 200px;
+          height: 200px; }
+      #intro .container .about {
         margin-bottom: 30px;
-        font-size: 2em; }
-      #intro .container .about p {
-        margin-bottom: 8px;
-        margin-left: 40px; }
-    #intro .container .greeting {
-      width: 405px;
-      margin-left: 90px; }
-    #intro .container:before, #intro .container:after {
-      display: block;
-      height: 0;
-      visibility: hidden;
-      content: "\0020"; }
-    #intro .container:after {
-      clear: both; } }
-@media all and (min-width: 768px) {
-  #intro {
-    zoom: 1; }
-    #intro .title {
-      margin-left: 67.5px; }
-    #intro .img-container {
-      width: 270px;
-      margin-left: 67.5px;
-      margin-bottom: 50px; }
-      #intro .img-container img {
-        width: 260px;
-        height: 260px; }
-    #intro .about {
-      width: 270px;
-      margin-top: 50px;
-      margin-bottom: 30px;
-      margin-left: 80px;
-      padding: 8px 0; }
-      #intro .about p.name {
-        margin-left: 30px;
+        padding: 8px 0; }
+        #intro .container .about p.name {
+          margin-left: 30px;
+          margin-bottom: 30px;
+          font-size: 2em; }
+        #intro .container .about p {
+          margin-bottom: 8px;
+          margin-left: 40px; }
+      #intro .container .greeting {
+        width: 405px;
+        margin-left: 90px; }
+      #intro .container:before, #intro .container:after {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        content: "\0020"; }
+      #intro .container:after {
+        clear: both; } }
+  @media all and (min-width: 768px) {
+    #intro {
+      zoom: 1; }
+      #intro .title {
+        margin-left: 67.5px; }
+      #intro .img-container {
+        width: 270px;
+        margin-left: 67.5px;
+        margin-bottom: 50px; }
+        #intro .img-container img {
+          width: 260px;
+          height: 260px; }
+      #intro .about {
+        width: 270px;
+        margin-top: 50px;
         margin-bottom: 30px;
-        font-size: 2em; }
-      #intro .about p {
-        margin-bottom: 8px;
-        margin-left: 40px; }
-    #intro .greeting {
-      width: 540px;
-      margin-left: 135px; }
-    #intro:before, #intro:after {
-      display: block;
-      height: 0;
-      visibility: hidden;
-      content: "\0020"; }
-    #intro:after {
-      clear: both; } }
+        margin-left: 80px;
+        padding: 8px 0; }
+        #intro .about p.name {
+          margin-left: 30px;
+          margin-bottom: 30px;
+          font-size: 2em; }
+        #intro .about p {
+          margin-bottom: 8px;
+          margin-left: 40px; }
+      #intro .greeting {
+        width: 540px;
+        margin-left: 135px; }
+      #intro:before, #intro:after {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        content: "\0020"; }
+      #intro:after {
+        clear: both; } }
 
 #gallery {
   padding-top: 1px;
-  background-color: #f8f8f8; }
+  background-color: #bdc3c7; }
   #gallery .title {
     margin-bottom: 20px; }
   #gallery .subtitle {
@@ -409,15 +416,28 @@ li {
       margin-left: 12px; } }
 
 #staff {
+  background-color: white;
   zoom: 1; }
   #staff .title {
     margin-bottom: 20px; }
   #staff .subtitle {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    width: 170px; }
+  #staff ul {
+    zoom: 1; }
+    #staff ul:before, #staff ul:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #staff ul:after {
+      clear: both; }
   #staff li {
     float: left;
     width: 135px;
     margin-bottom: 20px; }
+    #staff li p {
+      text-align: center; }
   #staff:before, #staff:after {
     display: block;
     height: 0;

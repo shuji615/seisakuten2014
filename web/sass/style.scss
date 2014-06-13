@@ -30,8 +30,9 @@
 // ======
 
 $white: #FFFFFF;
-$darkgray: #efefef;
-$lightgray: #f8f8f8;
+$lightgray: #efefef;
+$darkgray: #34495e;
+$gray: #f8f8f8;
 $black: #1F2020;
 
 $padding: 8px;
@@ -270,8 +271,8 @@ section {
         padding: 4px;
         font-size: 16px;
         text-align: center;
-        color: $darkgray;
-        border-bottom: solid 3px $darkgray;
+        color: $lightgray;
+        border-bottom: solid 3px $lightgray;
       }
     }
     @include clearfix;
@@ -294,8 +295,8 @@ section {
           padding: 2px;
           font-size: 10px;
           text-align: center;
-          color: $darkgray;
-          border-bottom: solid 2px $darkgray;
+          color: $lightgray;
+          border-bottom: solid 2px $lightgray;
         }
       }
     }
@@ -314,13 +315,23 @@ section {
 }
 
 #intro {
+  background-color: #2c3e50;
+  p {
+    color: $lightgray;
+    line-height: 25px;
+  }
   .title {
     margin-bottom: 40px;
   }
   .container {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     &>div {
       float: left;
+    }
+    .img-container {
+      img {
+        border-radius: $elem-width / 2;
+      }
     }
     .text-container {
       width: $elem-width * 2;
@@ -341,7 +352,6 @@ section {
     }
     @include clearfix;
   }
-
   @media all and (max-width: 479px) {
   .container {
     $img-width:   200px;
@@ -444,7 +454,7 @@ section {
 
 #gallery {
   padding-top: 1px;
-  background-color: $lightgray;
+  background-color: #bdc3c7;
   $gallery-elem-padding: 12px;
 
   .title {
@@ -494,7 +504,7 @@ section {
           margin-left: 12px;
           margin-bottom: 8px;
           font-size: 14px;
-          color: $darkgray;
+          color: $lightgray;
         }
         .work-title {
           padding-top: 10px;
@@ -537,16 +547,25 @@ section {
 }
 
 #staff {
+  background-color:  white;
   .title {
     margin-bottom: 20px;
   }
   .subtitle {
     margin-bottom: 20px;
+    width: 170px;
   }
+  ul {
+    @include clearfix;
+  }
+
   li {
     float: left;
     width: $elem-width / 2;
     margin-bottom: 20px;
+    p {
+      text-align: center;
+    }
   }
 
   @include clearfix;
