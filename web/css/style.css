@@ -426,6 +426,18 @@ li {
   #staff .subtitle {
     margin-bottom: 20px;
     width: 170px; }
+    #staff .subtitle.producer {
+      border-bottom-color: #e74c3c; }
+    #staff .subtitle.money {
+      border-bottom-color: #3498db; }
+    #staff .subtitle.recording {
+      border-bottom-color: #1abc9c; }
+    #staff .subtitle.design {
+      border-bottom-color: #f1c40f; }
+    #staff .subtitle.setting {
+      border-bottom-color: #e74c3c; }
+    #staff .subtitle.PR {
+      border-bottom-color: #3498db; }
   #staff ul {
     zoom: 1; }
     #staff ul:before, #staff ul:after {

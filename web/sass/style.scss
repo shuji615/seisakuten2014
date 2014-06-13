@@ -556,11 +556,28 @@ section {
   .subtitle {
     margin-bottom: 20px;
     width: 170px;
+    &.producer {
+      border-bottom-color: #e74c3c;
+    }
+    &.money {
+      border-bottom-color: #3498db;
+    }
+    &.recording {
+      border-bottom-color: #1abc9c;
+    }
+    &.design {
+      border-bottom-color: #f1c40f;
+    }
+    &.setting {
+      border-bottom-color: #e74c3c;
+    }
+    &.PR {
+      border-bottom-color: #3498db;
+    }
   }
   ul {
     @include clearfix;
   }
-
   li {
     float: left;
     width: $elem-width / 2;
@@ -569,7 +586,6 @@ section {
       text-align: center;
     }
   }
-
   @include clearfix;
 
   @media all and (max-width: 479px) {
