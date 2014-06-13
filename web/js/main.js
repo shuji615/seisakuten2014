@@ -1,3 +1,10 @@
+var isRotate = true;
+var StartRorate = function () {
+    isRotate = true;
+}
+var StopRotate = function() {
+    isRotate = false;
+}
 var ImgRotate = function() {
     var T$ = function(id) { return document.getElementById(id); }
     var ua = navigator.userAgent,
@@ -12,7 +19,7 @@ var ImgRotate = function() {
                 cosDeg = Math.cos(angle * Math.PI / 180);
                 sinDeg = Math.sin(angle * Math.PI / 180);
                 with(target.filters.item(0)) {
-                    M11 = M22 = cosDeg; M12 = -(M21 = sinDeg); 
+                    M11 = M22 = cosDeg; M12 = -(M21 = sinDeg);
                 }
                 target.style.top = (orginH - target.offsetHeight) / 2 + 'px';
                 target.style.left = (orginW - target.offsetWidth) / 2 + 'px';
@@ -26,21 +33,20 @@ var ImgRotate = function() {
                 target.style.transform = "rotate(" + angle + "deg)";
             }
         }
-        
+
         timer = setInterval(function() {
-            i += 1;
-            run(i);
+           if (isRotate){
+              i += 0.1;
+              run(i);
+            }
             //if (i > degree - 1) {
             //     i = 0;
             //    clearInterval(timer);
-            //} 
-        }, 10); 
+            //}
+        }, 10);
     }
     return {rotate: rotate}
 }();
-$(document).ready(function() {
-    ImgRotate.rotate('top-img', 360);
-});
 
 var main = {
   init: function() {
@@ -54,15 +60,6 @@ var main = {
     // デフォルトの要素サイズを取得しておく
   },
 };
-
-main.sections = [
-  '#top',
-  '#nav',
-  '#intro',
-  '#gallery',
-  '#staff',
-  '#footer',
-];
 
 main.scroll = {
   init: function() {
@@ -80,27 +77,15 @@ main.scroll = {
     });
   },
   to: function (section) {
-    var top = 0;
-    var found = false;
-    for (var i = 0, l = main.sections.length; i < l; i++) {
-      var _section = main.sections[i];
-      if (_section == section) {
-        found = true;
-        break;
-      }
-      top += $(_section).height();
-      if (_section == "#nav") top -= $(_section).height();
-    }
-    if (!found) {
-      return;
-    }
+    var top = $(section).offset().top;
+    if (section != '#top') top -= 80;
     $('html, body').animate({ scrollTop: top}, 'fast');
   },
 };
 
 main.top = {
   init: function() {
-
+    ImgRotate.rotate('top-img', 360);
   },
 };
 
@@ -127,11 +112,12 @@ main.nav = {
 
 main.gallery = {
   init: function () {
-    $(document).ready(function() {
-      $(".fancybox").fancybox({
-        openEffect  : 'none',
-        closeEffect : 'none'
-      });
+    $(".fancybox").fancybox({
+      openEffect  : 'none',
+      closeEffect : 'none',
+      afterClose: function() {
+        $(".fancybox").show();
+      }
     });
   },
 };
