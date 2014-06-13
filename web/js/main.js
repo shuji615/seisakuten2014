@@ -1,11 +1,11 @@
-var ImgRotate = function(target) {
+var ImgRotation = function(argTarget) {
     var isRotate = true;
     var T$ = function(id) { return document.getElementById(id); }
     var ua = navigator.userAgent,
         isIE = /msie/i.test(ua) && !window.Opera;
     var i = 0, sinDeg = 0, cosDeg = 0, timer = null ;
-    var rotate = function() {
-        target = T$(target);
+    var target = T$(argTarget);
+    var start = function() {
         var orginW = target.clientWidth, orginH = target.clientHeight;
             clearInterval(timer);
         function run(angle) {
@@ -40,7 +40,7 @@ var ImgRotate = function(target) {
       timer = null;
     };
     return {
-      rotate: rotate,
+      start: start,
       stop: stop
     };
 };
@@ -60,10 +60,9 @@ var main = {
 
 main.scroll = {
   init: function() {
-    // var WIDTH = $(window).width();
-    // var HEIGHT = $(window).height();
     $(window).scroll(function(e){
       var top = $(document).scrollTop();
+      main.top.scroll(top);
       if (top > $('#top').height()) {
         $('#nav').addClass('stick-to-top');
         $('#nav-alt').removeClass('hidden');
@@ -82,9 +81,26 @@ main.scroll = {
 
 main.top = {
   init: function() {
-    this.rotation = ImgRotate('top-img-rotate');
-    this.rotation.rotate();
+    this.rotation = ImgRotation('top-img-rotate');
+    this.rotation.start();
+    this.offsetBottom = $('#nav').offset().top;
   },
+  scroll: function(top) {
+    if (top < this.offsetBottom) {
+      if (!this.isAnimating) {
+        this.rotation.start();
+        this.isAnimating = true;
+        console.log('start');
+      }
+    } else {
+      if (this.isAnimating) {
+        this.rotation.stop();
+        this.isAnimating = false;
+        console.log('stop');
+      }
+    }
+
+  }
 };
 
 main.nav = {
