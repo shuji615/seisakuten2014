@@ -28,7 +28,7 @@ var ImgRotate = function() {
         }
 
         timer = setInterval(function() {
-            i += 1;
+            i += 0.1;
             run(i);
             //if (i > degree - 1) {
             //     i = 0;

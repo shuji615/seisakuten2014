@@ -218,7 +218,6 @@ li {
       margin-left: 80px; }
     #intro .container .text-container .about {
       margin-bottom: 30px;
-      border-left: solid 2px #1f2020;
       padding: 8px 0; }
       #intro .container .text-container .about p.name {
         margin-left: 30px;
@@ -227,11 +226,6 @@ li {
       #intro .container .text-container .about p {
         margin-bottom: 8px;
         margin-left: 40px; }
-  #intro .container .img-container {
-    width: 270px; }
-    #intro .container .img-container img {
-      width: 260px;
-      height: 260px; }
   #intro .container:before, #intro .container:after {
     display: block;
     height: 0;
@@ -248,8 +242,8 @@ li {
         margin-left: 80px; }
       #intro .container .text-container .about {
         width: 270px;
+        height: 250px;
         margin-bottom: 30px;
-        border-left: solid 2px #1f2020;
         padding: 8px 0; }
         #intro .container .text-container .about p.name {
           margin-left: 30px;
@@ -258,17 +252,30 @@ li {
         #intro .container .text-container .about p {
           margin-bottom: 8px;
           margin-left: 40px; }
-    #intro .container .img-container {
-      width: 270px; }
-      #intro .container .img-container img {
-        width: 260px;
-        height: 260px; }
+    #intro .container .img-container img {
+      width: 200px;
+      height: 200px; }
     #intro .container:before, #intro .container:after {
       display: block;
       height: 0;
       visibility: hidden;
       content: "\0020"; }
     #intro .container:after {
+      clear: both; } }
+@media all and (min-width: 768px) {
+  #intro {
+    zoom: 1; }
+    #intro .img-container {
+      width: 270px; }
+      #intro .img-container img {
+        width: 260px;
+        height: 260px; }
+    #intro:before, #intro:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #intro:after {
       clear: both; } }
 
 #gallery {

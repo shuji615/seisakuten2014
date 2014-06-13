@@ -317,7 +317,6 @@ section {
       }
       .about {
         margin-bottom: 30px;
-        border-left: solid 2px $black;
         padding: $padding 0;
         p.name {
           margin-left: 30px;
@@ -328,14 +327,6 @@ section {
           margin-bottom: 8px;
           margin-left: 40px;
         }
-      }
-    }
-    .img-container {
-      width: $elem-width;
-      $img-width: ($elem-width) - 10px;
-      img {
-        width:  $img-width;
-        height: $img-width;
       }
     }
     @include clearfix;
@@ -352,8 +343,8 @@ section {
       }
       .about {
         width: $elem-width;
+        height: 250px;
         margin-bottom: 30px;
-        border-left: solid 2px $black;
         padding: $padding 0;
         p.name {
           margin-left: 30px;
@@ -367,8 +358,7 @@ section {
       }
     }
     .img-container {
-      width: $elem-width;
-      $img-width: ($elem-width) - 10px;
+      $img-width:  200px;
       img {
         width:  $img-width;
         height: $img-width;
@@ -378,6 +368,15 @@ section {
   }
   }
   @media all and (min-width: 768px) {
+    .img-container {
+      width: $elem-width;
+      $img-width: ($elem-width) - 10px;
+      img {
+        width:  $img-width;
+        height: $img-width;
+      }
+    }
+    @include clearfix;
   }
 }
 
