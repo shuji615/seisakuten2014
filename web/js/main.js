@@ -1,3 +1,10 @@
+var isRotate = true;
+var StartRorate = function () {
+    isRotate = true;
+}
+var StopRotate = function() {
+    isRotate = false;
+}
 var ImgRotate = function() {
     var T$ = function(id) { return document.getElementById(id); }
     var ua = navigator.userAgent,
@@ -28,8 +35,10 @@ var ImgRotate = function() {
         }
 
         timer = setInterval(function() {
-            i += 0.1;
-            run(i);
+           if (isRotate){
+              i += 0.1;
+              run(i);
+            }
             //if (i > degree - 1) {
             //     i = 0;
             //    clearInterval(timer);
@@ -105,7 +114,10 @@ main.gallery = {
   init: function () {
     $(".fancybox").fancybox({
       openEffect  : 'none',
-      closeEffect : 'none'
+      closeEffect : 'none',
+      afterClose: function() {
+        $(".fancybox").show();
+      }
     });
   },
 };
