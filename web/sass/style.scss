@@ -1,11 +1,11 @@
 @charset 'utf-8';
 
 // media querys
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
   }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
   }
 
 @mixin clearfix {
@@ -104,7 +104,7 @@ section {
   }
 }
 
-@media all and (max-width: 479px) {
+@media all and (max-width: 539px) {
   .constraint {
     width: $elem-width;
   }
@@ -122,7 +122,7 @@ section {
     margin: 0 auto;
   }
 }
-@media all and (min-width: 480px) and (max-width: 767px) {
+@media all and (min-width: 540px) and (max-width: 809px) {
   .constraint {
     width: $elem-width * 2;
   }
@@ -133,7 +133,7 @@ section {
     display: block;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 810px) {
   .constraint {
     width: $elem-width * 3;
   }
@@ -181,7 +181,7 @@ section {
   .constraint {
     @include clearfix;
   }
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
     #top-img, #top-img-rotate {
       width: $elem-width;
       margin-bottom: 30px;
@@ -210,9 +210,9 @@ section {
       margin-bottom: 10px;
     }
   }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
     #top-img, #top-img-rotate {
       margin-left: 0px;
       float: left;
@@ -279,7 +279,7 @@ section {
   }
   @include clearfix;
 
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
     #nav-logo {
       width: 90px;
     }
@@ -301,9 +301,9 @@ section {
       }
     }
   }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
   }
 }
 
@@ -352,7 +352,7 @@ section {
     }
     @include clearfix;
   }
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
   .container {
     $img-width:   200px;
     .img-container {
@@ -383,7 +383,7 @@ section {
     @include clearfix;
   }
   }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
   .container {
     .img-container {
       margin-left: $elem-width / 4;
@@ -414,7 +414,7 @@ section {
     @include clearfix;
   }
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
     .title {
       margin-left: $elem-width / 4;
     }
@@ -534,14 +534,14 @@ section {
   }
 
 
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
   }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
   .subtitle {
     margin-left: $gallery-elem-padding;
   }
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
   .subtitle {
     margin-left: $gallery-elem-padding;
   }
@@ -588,11 +588,11 @@ section {
   }
   @include clearfix;
 
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
   }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
   }
 }
 
@@ -600,10 +600,10 @@ section {
   background-color: $black;
   height: 200px;
 
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
   }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
   }
 }

@@ -44,7 +44,7 @@ li {
     font-size: 16px;
     text-align: center; }
 
-@media all and (max-width: 479px) {
+@media all and (max-width: 539px) {
   .constraint {
     width: 270px; }
 
@@ -60,7 +60,7 @@ li {
 
   .subtitle {
     margin: 0 auto; } }
-@media all and (min-width: 480px) and (max-width: 767px) {
+@media all and (min-width: 540px) and (max-width: 809px) {
   .constraint {
     width: 540px; }
 
@@ -69,7 +69,7 @@ li {
 
   .md {
     display: block; } }
-@media all and (min-width: 768px) {
+@media all and (min-width: 810px) {
   .constraint {
     width: 810px; }
 
@@ -109,7 +109,7 @@ li {
     content: "\0020"; }
   #top .constraint:after {
     clear: both; }
-@media all and (max-width: 479px) {
+@media all and (max-width: 539px) {
   #top #top-img, #top #top-img-rotate {
     width: 270px;
     margin-bottom: 30px; }
@@ -129,7 +129,7 @@ li {
   #top #top-info {
     margin-right: 20px;
     margin-bottom: 10px; } }
-@media all and (min-width: 768px) {
+@media all and (min-width: 810px) {
   #top #top-img, #top #top-img-rotate {
     margin-left: 0px;
     float: left; }
@@ -194,7 +194,7 @@ li {
     content: "\0020"; }
   #nav:after {
     clear: both; }
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
     #nav #nav-logo {
       width: 90px; }
     #nav #nav-link ul {
@@ -247,7 +247,7 @@ li {
       content: "\0020"; }
     #intro .container:after {
       clear: both; }
-  @media all and (max-width: 479px) {
+  @media all and (max-width: 539px) {
     #intro .container {
       zoom: 1; }
       #intro .container .img-container {
@@ -276,7 +276,7 @@ li {
         content: "\0020"; }
       #intro .container:after {
         clear: both; } }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
     #intro .container {
       zoom: 1; }
       #intro .container .img-container {
@@ -305,7 +305,7 @@ li {
         content: "\0020"; }
       #intro .container:after {
         clear: both; } }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
     #intro {
       zoom: 1; }
       #intro .title {
@@ -411,10 +411,10 @@ li {
         width: 230px;
         height: 172.5px;
         border-radius: 8px; }
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media all and (min-width: 540px) and (max-width: 809px) {
     #gallery .subtitle {
       margin-left: 12px; } }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 810px) {
     #gallery .subtitle {
       margin-left: 12px; } }
 
