@@ -146,11 +146,15 @@ section {
 /* local */
 
 #top {
-  #top-img {
+  #top-img, #top-img-rotate {
     margin: 0 auto;
     width: $elem-width * 2;
     img {
     }
+  }
+  #top-img-rotate {
+    position: absolute;
+    z-index: -1;
   }
   #top-copy {
     margin: 0 auto;
@@ -176,7 +180,7 @@ section {
     @include clearfix;
   }
   @media all and (max-width: 479px) {
-    #top-img {
+    #top-img, #top-img-rotate {
       width: $elem-width;
       margin-bottom: 30px;
       img {
@@ -207,7 +211,7 @@ section {
   @media all and (min-width: 480px) and (max-width: 767px) {
   }
   @media all and (min-width: 768px) {
-    #top-img {
+    #top-img, #top-img-rotate {
       margin-left: 0px;
       float: left;
       img {

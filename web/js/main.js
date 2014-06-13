@@ -76,7 +76,7 @@ main.scroll = {
 
 main.top = {
   init: function() {
-    ImgRotate.rotate('top-img', 360);
+    ImgRotate.rotate('top-img-rotate', 360);
   },
 };
 
