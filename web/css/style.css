@@ -449,3 +449,7 @@ li {
 #footer {
   background-color: #1f2020;
   height: 200px; }
+
+.gallery-fancybox-class img{
+  width: 400px;
+  height: 300px;}
