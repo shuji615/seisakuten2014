@@ -90,7 +90,7 @@ main.top = {
     var self = this;
     this.defaultRotationSpeed = 0.1
     var timer;
-    var maxSpeed = 20;
+    var maxSpeed = 5;
     $('#top-img').mouseover(function(){
       clearInterval(timer);
       timer = setInterval(function () {
@@ -100,7 +100,7 @@ main.top = {
           timer = null;
           return;
         }
-        self.rotation.setSpeed(speed + 0.05);
+        self.rotation.setSpeed(speed + 0.01);
       } , 0.1);
     });
     $('#top-img').mouseout(function(){

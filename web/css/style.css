@@ -419,7 +419,6 @@ li {
       margin-left: 12px; } }
 
 #staff {
-  padding-bottom: 40px;
   background-color: white;
   zoom: 1; }
   #staff .title {
@@ -462,9 +461,15 @@ li {
   #staff:after {
     clear: both; }
 
+#footer-city-img {
+  width: 100%;
+  height: 100px;
+  background-image: url("../img/city.png"); }
+
 #footer {
+  padding-top: 40px;
   background-color: #1f2020;
-  height: 200px; }
+  height: 60px; }
   #footer #footer-copy {
     width: 100%; }
     #footer #footer-copy p {
