@@ -549,6 +549,7 @@ section {
 }
 
 #staff {
+  padding-bottom: 40px;
   background-color:  white;
   .title {
     margin-bottom: 20px;
@@ -599,6 +600,14 @@ section {
 #footer {
   background-color: $black;
   height: 200px;
+
+  #footer-copy {
+    width: 100%;
+    p {
+      color: $lightgray;
+      text-align: center;
+    }
+  }
 
   @media all and (max-width: 539px) {
   }

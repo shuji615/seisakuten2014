@@ -419,6 +419,7 @@ li {
       margin-left: 12px; } }
 
 #staff {
+  padding-bottom: 40px;
   background-color: white;
   zoom: 1; }
   #staff .title {
@@ -464,14 +465,8 @@ li {
 #footer {
   background-color: #1f2020;
   height: 200px; }
-
-.fancybox .work-intro {
-  display: none; }
-.gallery-fancybox-class img{
-  width: 400px;
-  height: 300px; 
-  float: left; }
-.gallery-fancybox-class .work-description{
-  float: right; }
-.gallery-fancybox-class .work-intro {
-  display: block; }
+  #footer #footer-copy {
+    width: 100%; }
+    #footer #footer-copy p {
+      color: #efefef;
+      text-align: center; }
