@@ -80,7 +80,7 @@ main.scroll = {
   },
   to: function (section) {
     var top = $(section).offset().top;
-    if (section != '#top') top -= 80;
+    if (section != '#top') top -= $('#nav').height();
     $('html, body').animate({ scrollTop: top}, 'fast');
   },
 };
