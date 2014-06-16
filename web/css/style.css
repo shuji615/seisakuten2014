@@ -464,3 +464,14 @@ li {
 #footer {
   background-color: #1f2020;
   height: 200px; }
+
+.fancybox .work-intro {
+  display: none; }
+.gallery-fancybox-class img{
+  width: 400px;
+  height: 300px; 
+  float: left; }
+.gallery-fancybox-class .work-description{
+  float: right; }
+.gallery-fancybox-class .work-intro {
+  display: block; }
