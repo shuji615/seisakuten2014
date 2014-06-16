@@ -153,6 +153,15 @@ li {
   background-color: #1f2020;
   height: 80px;
   zoom: 1; }
+  #nav .constraint {
+    zoom: 1; }
+    #nav .constraint:before, #nav .constraint:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #nav .constraint:after {
+      clear: both; }
   #nav.stick-to-top {
     width: 100%;
     position: fixed;
@@ -165,6 +174,9 @@ li {
     #nav #nav-logo img {
       width: 134px;
       height: 80px; }
+    #nav #nav-logo img.sm {
+      width: 35px;
+      height: 35px; }
   #nav #nav-link {
     float: right;
     zoom: 1; }
@@ -195,25 +207,31 @@ li {
   #nav:after {
     clear: both; }
   @media all and (max-width: 539px) {
-    #nav #nav-logo {
-      width: 90px; }
-    #nav #nav-link ul {
-      float: none; }
-    #nav #nav-link li {
-      float: left;
-      padding-top: 14px;
-      margin-left: 10px; }
-      #nav #nav-link li a {
-        padding: 2px;
-        font-size: 10px;
-        text-align: center;
-        color: #efefef;
-        border-bottom: solid 2px #efefef; } }
+    #nav {
+      height: 50px; }
+      #nav #nav-logo {
+        padding-top: 6px;
+        width: 35px; }
+      #nav #nav-link ul {
+        float: none; }
+      #nav #nav-link li {
+        float: left;
+        padding-top: 14px;
+        margin-left: 10px; }
+        #nav #nav-link li a {
+          padding: 2px;
+          font-size: 4px;
+          text-align: center;
+          color: #efefef;
+          border-bottom: solid 2px #efefef; } }
 
 #nav-alt {
   height: 80px; }
   #nav-alt.hidden {
     display: none; }
+  @media all and (max-width: 539px) {
+    #nav-alt {
+      height: 50px; } }
 
 #intro {
   padding-bottom: 50px;
