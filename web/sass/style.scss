@@ -643,3 +643,45 @@ section {
   @media all and (min-width: 810px) {
   }
 }
+
+// fancy box
+.fancybox-skin {
+  background-color: #aaa !important;
+  a.fancybox {
+    .work-elem {
+      img {
+        position: relative;
+        left: 240px;
+        margin-left: -120px;
+        width: 480px;
+        height: 360px;
+        border-radius: 10px;
+      }
+      .work-thumb-title, .work-thumb-space, .work-thumb-author {
+        display: none;
+      }
+      .work-detail {
+        padding-top: 10px;
+        &>div {
+          margin-bottom: 8px;
+        }
+        .work-detail-title {
+          font-size: 28px;
+        }
+        .work-detail-space {
+          font-size: 17px;
+        }
+        .work-detail-author {
+
+        }
+        .work-detail-affiliation {
+
+        }
+        .work-detail-note {
+
+        }
+      }
+    }
+  }
+}
+

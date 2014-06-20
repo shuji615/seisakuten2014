@@ -500,3 +500,23 @@ li {
     #footer #footer-copy p {
       color: #efefef;
       text-align: center; }
+
+.fancybox-skin {
+  background-color: #aaa !important; }
+  .fancybox-skin a.fancybox .work-elem img {
+    position: relative;
+    left: 240px;
+    margin-left: -120px;
+    width: 480px;
+    height: 360px;
+    border-radius: 10px; }
+  .fancybox-skin a.fancybox .work-elem .work-thumb-title, .fancybox-skin a.fancybox .work-elem .work-thumb-space, .fancybox-skin a.fancybox .work-elem .work-thumb-author {
+    display: none; }
+  .fancybox-skin a.fancybox .work-elem .work-detail {
+    padding-top: 10px; }
+    .fancybox-skin a.fancybox .work-elem .work-detail > div {
+      margin-bottom: 8px; }
+    .fancybox-skin a.fancybox .work-elem .work-detail .work-detail-title {
+      font-size: 28px; }
+    .fancybox-skin a.fancybox .work-elem .work-detail .work-detail-space {
+      font-size: 17px; }
