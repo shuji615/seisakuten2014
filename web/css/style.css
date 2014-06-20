@@ -282,7 +282,7 @@ li {
           width: 270px;
           text-align: center;
           margin-bottom: 10px;
-          font-size: 1.5em; }
+          font-size: 17px; }
         #intro .container .about p.prop {
           margin-left: 35px;
           margin-bottom: 8px; }
@@ -306,11 +306,14 @@ li {
           height: 200px; }
       #intro .container .about {
         margin-bottom: 30px;
-        padding: 8px 0; }
+        padding: 8px 0;
+        width: 270px; }
         #intro .container .about p.name {
           margin-left: 30px;
-          margin-bottom: 30px;
-          font-size: 2em; }
+          margin-bottom: 10px;
+          font-size: 25px; }
+        #intro .container .about p.prop {
+          margin-bottom: 10px; }
         #intro .container .about p {
           margin-bottom: 8px;
           margin-left: 40px; }
@@ -338,14 +341,16 @@ li {
           height: 260px; }
       #intro .about {
         width: 270px;
-        margin-top: 50px;
+        margin-top: 0px;
         margin-bottom: 30px;
         margin-left: 80px;
         padding: 8px 0; }
         #intro .about p.name {
           margin-left: 30px;
-          margin-bottom: 30px;
-          font-size: 2em; }
+          margin-bottom: 10px;
+          font-size: 25px; }
+        #intro .about p.prop {
+          margin-bottom: 15px; }
         #intro .about p {
           margin-bottom: 8px;
           margin-left: 40px; }
