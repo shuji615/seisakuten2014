@@ -164,14 +164,14 @@ main.nav = {
 
 main.gallery = {
   init: function () {
-    $(".fancybox").fancybox({
-      openEffect  : 'none',
-      closeEffect : 'none',
-      wrapCSS : 'gallery-fancybox',
-      afterClose: function() {
-        $(".fancybox").show();
-      }
-    });
+    // $(".fancybox").fancybox({
+    //   openEffect  : 'none',
+    //   closeEffect : 'none',
+    //   wrapCSS : 'gallery-fancybox',
+    //   afterClose: function() {
+    //     $(".fancybox").show();
+    //   }
+    // });
   },
 };
 
