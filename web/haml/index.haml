@@ -29,10 +29,10 @@
         %p.lg ちょっと離れてる
         %p.lg 空間
       #top-info
-        %p 2014年7月4日(金) ~ 7月7日(月)
-        %p 11:00 ~ 19:00 (最終日は11:00 ~ 16:00)
+        %p 2014年xx月xx日 ~ xx月xx日
+        %p xx:xx ~ xx:xx (最終日はxx:xx ~ xx:xx)
         %p
-          東京大学工学部2号館2階 (
+          東京大学工学部2号館xxxx (
           %a{:href => "http://www.u-tokyo.ac.jp/campusmap/cam01_04_03_j.html"} Map
           )
     #top-city-img
@@ -45,69 +45,114 @@
       #nav-link
         %ul
           %li
-            %a#gallery-link{:href => "#"} 作品一覧
-          %li
             %a#intro-link{:href => "#"} ご挨拶
+          %li
+            %a#gallery-link{:href => "#"} ギャラリー
           %li
             %a#staff-link{:href => "#"} スタッフ
           %li
             %a#access-link{:href => "http://www.u-tokyo.ac.jp/campusmap/cam01_04_03_j.html"} アクセス
   #nav-alt.hidden
+  %section#intro
+    .constraint
+      .title
+        %p ご挨拶
+      .container
+        .img-container
+          %img{:src => "img/sensei.png"}/
+        .about
+          %p.name 苗村健
+          %p.prop 東京大学大学院 情報学環／情報理工学系研究科 教授
+          %p.name 小松宏誠
+          %p.prop 東京大学大学院 学際情報学府 非常勤講師
+          %p.name 赤川智洋
+          %p.prop 東京大学大学院 学際情報学府 非常勤特任研究員
+        .greeting
+          %p
+            東京大学では、学生たちが自らの研究的な関心を元に表現に挑戦する学際的実践の場として、「東京大学制作展」を開催してきました。今回の「東京大学制作展エクストラ2014」は、本年11月に予定している「第16回東京大学制作展」へ向けた前哨戦です。4月に開講した大学院講義の一環として、3ヶ月の期間で企画・運営から作品制作までの一通りを経験する場が7月のエクストラであり、そこでの経験やフィードバックを活かして11月に臨みます。まだ粗削りではありますが、可能性を秘めた原石たちの取り組みをご覧ください。<br />
+            表現活動と研究活動の両立は、情報学環・学際情報学府が2000年に設立された当初からの大きなテーマです。東京大学制作展には、荒川忠一先生・鈴木太朗先生を中心に、その中核を担ってきた歴史があります。本年度からは新たな体制になりますが、その精神を引き継ぎ、表現活動としては新たなキャンバスそのものから創出するような試みを、研究活動としては机上の空論に終わらない社会に開かれた研究スタイルとしての制作展示に取り組んでいきたいと考えています。<br />
+            今回のテーマは「リアルからちょっと離れてる空間」です。現実世界の常識に囚われない空間を創り出したいという意気込みで、企画・制作を進めました。学生たちの活力を基に変化し続ける東京大学制作展をぜひご高覧ください。みなさまのご来場を教職員・学生一同、心よりお待ちしております。
+
+      .container
+        .img-container
+          %img{:src => "img/producer.png"}/
+        .about
+          %p.name 北原 俊
+          %p.prop 東京大学大学院学際情報学府 xx研究室所属一年
+          %p.name 平木 剛史
+          %p.prop 東京大学大学院学際情報学府 xx研究室所属一年
+        .greeting
+          %p
+            東京大学制作展は、我々学生が持てる限るの技術とアイディアを振り絞って創りあげたメディアアートの展覧会です。大学院情報学環・学際情報学府の授業の一環として、大学院生が主体となり、企画・運営を行ってきました。
+            今回のテーマは「リアルからちょっと離れてる空間」です。
+            各作家が普段学んでいる最先端の技術や考えをメディアアートとして皆様に楽しく体験していただきたい、そんな思いを込めて作品を創りあげています。
+            3ヶ月弱という短い期間ではありますが、全力で準備をしてきました。まだまだ荒削りな部分もあるかもしれません。ですがその分勢いがあり、各作家の特色濃い作品が揃っています。
+            ぜひ会場にいらしてください。何も難しいことはありません。気軽に楽しめる、でもちょっと不思議な「リアルから離れてる空間」があなたを待っています。
   %section#gallery
     .constraint
       .title
-        %p 作品一覧
+        %p ギャラリー
+      .subtitle
+        %p 作品
       #gallery-works
         %ul
           %li
             %a.fancybox{:rel => "gallery1"}
               .work-elem
                 .work-img
-                  %img{:alt => "指人形", :src => "img/work/ujitoko.jpg"}/
+                  %img{:alt => "かれいどすこうぷ", :src => "img/work/togo.jpg"}/
                   .work-description
                     .work-thumb-title
-                      %p 指人形
+                      %p かれいどすこうぷ
                     .work-thumb-space
-                      %p 不安定空間
+                      %p きらきら空間
                     .work-thumb-author
-                      %p 宇治土公 雄介
+                      %p 都甲直之
                     .work-detail
                       .work-detail-title
-                        %p 指人形
+                        %p かれいどすこうぷ
                       .work-detail-space
-                        %p 不安定空間
+                        %p きらきら空間
                       .work-detail-author
-                        %p 宇治土公 雄介
+                        %p 都甲直之
                       .work-detail-affiliation
-                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 広田研究室 修士課程1年
+                        %p 東京大学大学院 学際情報学府 学際情報学専攻 先端表現情報学コース 山中研究室 修士課程1年
                       .work-detail-note
                         %p
-                          擬人的な指の動きを利用したインターフェースが、ユーザーと映像空間をつなぐ。指先に人が宿る感覚を提供します。
+                          かさねてきらきら
           %li
             %a.fancybox{:rel => "gallery1"}
               .work-elem
                 .work-img
-                  %img{:alt => "LifeSequencer", :src => "img/work/kawase.png"}/
+                  %img{:alt => "Splatter Cooking Show", :src => "img/work/DSC_0252.jpg"}/
                   .work-description
                     .work-thumb-title
-                      %p LifeSequencer
+                      %p Splatter Cooking Show
                     .work-thumb-space
-                      %p 音楽空間
+                      %p 体感空間
                     .work-thumb-author
-                      %p 川瀬 佑司
+                      %p 平木 剛史, 北原 俊, 原 清楓, 角戸 絵理
                     .work-detail
                       .work-detail-title
-                        %p LifeSequencer
+                        %p Splatter Cooking Show
                       .work-detail-space
-                        %p 音楽空間
+                        %p 体感空間
                       .work-detail-author
-                        %p 川瀬 佑司
+                        %p 平木 剛史
                       .work-detail-affiliation
-                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 廣瀬・谷川研究室 修士課程1年
+                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 苗村研究室 修士課程1年
+                      .work-detail-author
+                        %p 北原 俊
+                      .work-detail-affiliation
+                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 小川研究室 修士課程1年
+                      .work-detail-author
+                        %p 原 清楓 角戸 絵理
+                      .work-detail-affiliation
+                        %p 多摩美術大学 美術学部情報デザイン学科 学士課程3年
                       .work-detail-note
                         %p
-                          日常の何気ない行動にも一つ一つ意味がある。<br />
-                          私達が普段気にも留めない行動でも大きな変化をもたらす可能性があることを、音楽で表現した作品。
+                          「うわっ」と驚く映像"体感"をあなたに．<br />
+                          黒子ロボットがあなたのために動きまわって働きます．
           %li
             %a.fancybox{:rel => "gallery1"}
               .work-elem
@@ -133,6 +178,31 @@
                         %p
                           最先端のウェアラブルデバイスであるGoogle Glassを用いて、<br />
                           製作展の作品を見た思い出を動画に残し、自分だけのお土産を作れます。
+          %li
+            %a.fancybox{:rel => "gallery1"}
+              .work-elem
+                .work-img
+                  %img{:alt => "Life Sequencer", :src => "img/work/kawase2.png"}/
+                  .work-description
+                    .work-thumb-title
+                      %p Life Sequencer
+                    .work-thumb-space
+                      %p 音楽空間
+                    .work-thumb-author
+                      %p 川瀬 佑司
+                    .work-detail
+                      .work-detail-title
+                        %p Life Sequencer
+                      .work-detail-space
+                        %p 音楽空間
+                      .work-detail-author
+                        %p 川瀬 佑司
+                      .work-detail-affiliation
+                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 廣瀬・谷川研究室 修士課程1年
+                      .work-detail-note
+                        %p
+                          日常の何気ない行動にも一つ一つ意味がある。<br />
+                          私達が普段気にも留めない行動でも大きな変化をもたらす可能性があることを、音楽で表現した作品。
           %li
             %a.fancybox{:rel => "gallery1"}
               .work-elem
@@ -163,137 +233,6 @@
             %a.fancybox{:rel => "gallery1"}
               .work-elem
                 .work-img
-                  %img{:alt => "minutescope", :src => "img/work/togo.jpg"}/
-                  .work-description
-                    .work-thumb-title
-                      %p minutescope
-                    .work-thumb-space
-                      %p 一分空間
-                    .work-thumb-author
-                      %p 都甲直之
-                    .work-detail
-                      .work-detail-title
-                        %p minutescope
-                      .work-detail-space
-                        %p 一分空間
-                      .work-detail-author
-                        %p 都甲直之
-                      .work-detail-affiliation
-                        %p 東京大学大学院 学際情報学府 学際情報学専攻 先端表現情報学コース 山中研究室 修士課程1年
-                      .work-detail-note
-                        %p
-                          有限と無限の間を伸びたり縮んだりする1分間
-          %li
-            %a.fancybox{:rel => "gallery1"}
-              .work-elem
-                .work-img
-                  %img{:alt => "Moving Theatre", :src => "img/work/comingsoon.jpg"}/
-                  .work-description
-                    .work-thumb-title
-                      %p Moving Theatre
-                    .work-thumb-space
-                      %p 体感空間
-                    .work-thumb-author
-                      %p 平木 剛史, 北原 俊, 原 清楓, 角戸 絵理
-                    .work-detail
-                      .work-detail-title
-                        %p Moving Theatre
-                      .work-detail-space
-                        %p 体感空間
-                      .work-detail-author
-                        %p 平木 剛史
-                      .work-detail-affiliation
-                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 苗村研究室 修士課程1年
-                      .work-detail-author
-                        %p 北原 俊
-                      .work-detail-affiliation
-                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 小川研究室 修士課程1年
-                      .work-detail-author
-                        %p 原 清楓 角戸 絵理
-                      .work-detail-affiliation
-                        %p 多摩美術大学 美術学部情報デザイン学科 学士課程3年
-                      .work-detail-note
-                        %p
-                          「うわっ」と驚く映像"体感"をあなたに．<br />
-                          黒子ロボットがあなたのために動きまわって働きます．
-          %li
-            %a.fancybox{:rel => "gallery1"}
-              .work-elem
-                .work-img
-                  %img{:alt => "言玉（ことだま）", :src => "img/work/comingsoon.jpg"}/
-                  .work-description
-                    .work-thumb-title
-                      %p 言玉（ことだま）
-                    .work-thumb-space
-                      %p 言玉空間
-                    .work-thumb-author
-                      %p 藤縄英佑
-                    .work-detail
-                      .work-detail-title
-                        %p 言玉（ことだま）
-                      .work-detail-space
-                        %p 言玉空間
-                      .work-detail-author
-                        %p 藤縄英佑
-                      .work-detail-affiliation
-                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 廣瀬・谷川研究室 修士課程1年
-                      .work-detail-note
-                        %p
-                          声に出した言葉が音の玉となって漂う空間
-          %li
-            %a.fancybox{:rel => "gallery1"}
-              .work-elem
-                .work-img
-                  %img{:alt => "ヴァーチャルアクアリウム", :src => "img/work/comingsoon.jpg"}/
-                  .work-description
-                    .work-thumb-title
-                      %p ヴァーチャルアクアリウム
-                    .work-thumb-space
-                      %p 水中空間
-                    .work-thumb-author
-                      %p 山本紘暉
-                    .work-detail
-                      .work-detail-title
-                        %p ヴァーチャルアクアリウム
-                      .work-detail-space
-                        %p 水中空間
-                      .work-detail-author
-                        %p 山本紘暉
-                      .work-detail-affiliation
-                        %p 東京大学大学院 情報理工学系研究科 電子情報学専攻  苗村研究室 修士課程1年
-                      .work-detail-note
-                        %p
-                          水の中の金魚。それは本当にそこにいるわけではない映像の金魚です。<br />
-                          しかし、映像であっても本物がいるのと同じように感じられる、そんな水中の空間を目指しました。
-          %li
-            %a.fancybox{:rel => "gallery1"}
-              .work-elem
-                .work-img
-                  %img{:alt => "シャコボクサー", :src => "img/work/afukushima.jpg"}/
-                  .work-description
-                    .work-thumb-title
-                      %p シャコボクサー
-                    .work-thumb-space
-                      %p 危険空間
-                    .work-thumb-author
-                      %p 福嶋昭彦
-                    .work-detail
-                      .work-detail-title
-                        %p シャコボクサー
-                      .work-detail-space
-                        %p 危険空間
-                      .work-detail-author
-                        %p 福嶋昭彦
-                      .work-detail-affiliation
-                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 河口研究室 博士課程1年
-                      .work-detail-note
-                        %p
-                          水に潜む強力な一撃。犠牲者はのちに語る。「何にやられたのかわからない。」<br />
-                          ただでさえ強い水中の王者がさらに巨大になって陸に上がってしまったら。
-          %li
-            %a.fancybox{:rel => "gallery1"}
-              .work-elem
-                .work-img
                   %img{:alt => "The 360° Skyline Song", :src => "img/work/360skyline_matsui.jpg"}/
                   .work-description
                     .work-thumb-title
@@ -320,6 +259,30 @@
             %a.fancybox{:rel => "gallery1"}
               .work-elem
                 .work-img
+                  %img{:alt => "指人形", :src => "img/work/finger.jpg"}/
+                  .work-description
+                    .work-thumb-title
+                      %p 指人形
+                    .work-thumb-space
+                      %p 不安定空間
+                    .work-thumb-author
+                      %p 宇治土公 雄介
+                    .work-detail
+                      .work-detail-title
+                        %p 指人形
+                      .work-detail-space
+                        %p 不安定空間
+                      .work-detail-author
+                        %p 宇治土公 雄介
+                      .work-detail-affiliation
+                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 広田研究室 修士課程1年
+                      .work-detail-note
+                        %p
+                          擬人的な指の動きを利用したインターフェースが、ユーザーと映像空間をつなぐ。指先に人が宿る感覚を提供します。
+          %li
+            %a.fancybox{:rel => "gallery1"}
+              .work-elem
+                .work-img
                   %img{:alt => "てあらいかがみ", :src => "img/work/tearai_matsui.jpg"}/
                   .work-description
                     .work-thumb-title
@@ -327,14 +290,14 @@
                     .work-thumb-space
                       %p 衛生空間
                     .work-thumb-author
-                      %p 松井 克文, 西原 英里, 竹内 裕太, 木原 共, 伊藤 航, 加藤 雄大
+                      %p 松井 克文, 西原 英里, 竹内 裕太, 木原 共, 伊藤 航, 加藤 雄大 
                     .work-detail
                       .work-detail-title
                         %p てあらいかがみ
                       .work-detail-space
                         %p 衛生空間
                       .work-detail-author
-                        %p 松井 克文, 西原 英里, 竹内 裕太, 木原 共, 伊藤 航, 加藤 雄大
+                        %p 松井 克文, 西原 英里, 竹内 裕太, 木原 共, 伊藤 航, 加藤 雄大 
                       .work-detail-affiliation
                         %p 東京大学大学院　学際情報学府 学際情報学専攻 文化・人間コース 荒川研究室 博士課程2年
                       .work-detail-note
@@ -345,58 +308,58 @@
                         %p
                           「てあらいかがみ」は、小さな子どものうちから「正しい手の洗い方」を楽しく勉強できる鏡のようなサイネージです。<br />
                           手洗いを正しく、楽しく勉強し、みんなに伝えたくなる仕組みをつくることで、 正しい手洗いの習慣を子供たちに身につけてもらいたいと考えています。
+          %li
+            %a.fancybox{:rel => "gallery1"}
+              .work-elem
+                .work-img
+                  %img{:alt => "シャコボクサー", :src => "img/work/afukushima.jpg"}/
+                  .work-description
+                    .work-thumb-title
+                      %p シャコボクサー
+                    .work-thumb-space
+                      %p 危険空間
+                    .work-thumb-author
+                      %p 福嶋昭彦
+                    .work-detail
+                      .work-detail-title
+                        %p シャコボクサー
+                      .work-detail-space
+                        %p 危険空間
+                      .work-detail-author
+                        %p 福嶋昭彦
+                      .work-detail-affiliation
+                        %p 東京大学大学院　学際情報学府 学際情報学専攻 先端表現情報学コース 河口研究室 博士課程1年
+                      .work-detail-note
+                        %p
+                          水に潜む強力な一撃。犠牲者はのちに語る。「何にやられたのかわからない。」<br />
+                          ただでさえ強い水中の王者がさらに巨大になって陸に上がってしまったら。
 
-      .title
-        %p 授業風景
+
+      .subtitle
+        %p メイキング
       #gallery-making
         %ul
           %li
             .making-elem
-              %img{:alt => "授業風景", :src => "img/making/making1.jpg"}/
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{:alt => "授業風景", :src => "img/making/making2.jpg"}/
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{:alt => "授業風景", :src => "img/making/making3.jpg"}/
+              %img{:alt => "風景", :src => "img/work.png"}/
           %li
             .making-elem
-              %img{:alt => "授業風景", :src => "img/making/making4.jpg"}/
-  %section#intro
-    .constraint
-      .title
-        %p ご挨拶
-      .container
-        .img-container
-          %img{:src => "img/naemura-sensei.png", :alt => "ご挨拶"}/
-        .about
-          %p.name 苗村健
-          %p.prop 東京大学大学院 情報学環／情報理工学系研究科 教授
-          %p.name 小松宏誠
-          %p.prop 東京大学大学院 学際情報学府 非常勤講師
-          %p.name 赤川智洋
-          %p.prop 東京大学大学院 学際情報学府 非常勤特任研究員
-        .greeting
-          %p
-            東京大学では、学生たちが自らの研究的な関心を元に表現に挑戦する学際的実践の場として、「東京大学制作展」を開催してきました。今回の「東京大学制作展エクストラ2014」は、本年11月に予定している「第16回東京大学制作展」へ向けた前哨戦です。4月に開講した大学院講義の一環として、3ヶ月の期間で企画・運営から作品制作までの一通りを経験する場が7月のエクストラであり、そこでの経験やフィードバックを活かして11月に臨みます。まだ粗削りではありますが、可能性を秘めた原石たちの取り組みをご覧ください。<br />
-            表現活動と研究活動の両立は、情報学環・学際情報学府が2000年に設立された当初からの大きなテーマです。東京大学制作展には、荒川忠一先生・鈴木太朗先生を中心に、その中核を担ってきた歴史があります。本年度からは新たな体制になりますが、その精神を引き継ぎ、表現活動としては新たなキャンバスそのものから創出するような試みを、研究活動としては机上の空論に終わらない社会に開かれた研究スタイルとしての制作展示に取り組んでいきたいと考えています。<br />
-            今回のテーマは「リアルからちょっと離れてる空間」です。現実世界の常識に囚われない空間を創り出したいという意気込みで、企画・制作を進めました。学生たちの活力を基に変化し続ける東京大学制作展をぜひご高覧ください。みなさまのご来場を教職員・学生一同、心よりお待ちしております。
-
-      .container
-        .img-container
-          %img{:src => "img/producer.png", :alt => "ご挨拶"}/
-        .about
-          %p.name 北原 俊
-          %p.prop 東京大学大学院学際情報学府 xx研究室所属一年
-          %p.name 平木 剛史
-          %p.prop 東京大学大学院学際情報学府 xx研究室所属一年
-        .greeting
-          %p
-            東京大学制作展は、我々学生が持てる限るの技術とアイディアを振り絞って創りあげたメディアアートの展覧会です。大学院情報学環・学際情報学府の授業の一環として、大学院生が主体となり、企画・運営を行ってきました。
-            今回のテーマは「リアルからちょっと離れてる空間」です。
-            各作家が普段学んでいる最先端の技術や考えをメディアアートとして皆様に楽しく体験していただきたい、そんな思いを込めて作品を創りあげています。
-            3ヶ月弱という短い期間ではありますが、全力で準備をしてきました。まだまだ荒削りな部分もあるかもしれません。ですがその分勢いがあり、各作家の特色濃い作品が揃っています。
-            ぜひ会場にいらしてください。何も難しいことはありません。気軽に楽しめる、でもちょっと不思議な「リアルから離れてる空間」があなたを待っています。
+              %img{:alt => "風景", :src => "img/work.png"}/
+          %li
+            .making-elem
+              %img{:alt => "風景", :src => "img/work.png"}/
+          %li
+            .making-elem
+              %img{:alt => "風景", :src => "img/work.png"}/
+          %li
+            .making-elem
+              %img{:alt => "風景", :src => "img/work.png"}/
   %section#staff
     .constraint
       .title
