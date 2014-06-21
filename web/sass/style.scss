@@ -327,11 +327,108 @@ section {
   }
 }
 
-#intro {
+#gallery {
+  padding-top: 1px;
   padding-bottom: 50px;
-  background-color: #2c3e50;
+  background-color: #8E8E8E;
+  $gallery-elem-padding: 12px;
   p {
     color: $lightgray;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    margin-bottom: 30px;
+    border-bottom: 3px solid $lightgray;
+  }
+
+  #gallery-works {
+    margin-bottom: 40px;
+    @include clearfix;
+  }
+
+  #gallery-making {
+    @include clearfix;
+  }
+
+  li {
+    float: left;
+  }
+
+  .work-elem {
+    margin-bottom: 30px;
+    width: ($elem-width);
+    $work-img-width: ($elem-width) - 40px;
+    .work-img {
+      margin-left: (($elem-width) - ($work-img-width)) * 0.5;
+      width: $work-img-width;
+      height: $work-img-width * 0.75;
+      overflow: hidden;
+      border-radius: 8px;
+      img {
+        width: $work-img-width;
+        height: $work-img-width * 0.75;
+        border-radius: 8px;
+      }
+      .work-description {
+        $height: 60px;
+        height: $height;
+        position: relative;
+        border-radius: 8px;
+        top: -($height);
+        background-color: rgba(0, 0, 0, 0.35);
+        p {
+          margin-left: 12px;
+          margin-bottom: 8px;
+          font-size: 14px;
+          color: $lightgray;
+        }
+        .work-title {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  .making-elem {
+    margin-bottom: 30px;
+    width: ($elem-width);
+    $work-img-width: ($elem-width) - 40px;
+    img {
+      margin-left: (($elem-width) - ($work-img-width)) * 0.5;
+      width: $work-img-width;
+      height: $work-img-width * 0.75;
+      overflow: hidden;
+      border-radius: 8px;
+      img {
+        width: $work-img-width;
+        height: $work-img-width * 0.75;
+        border-radius: 8px;
+      }
+    }
+  }
+
+
+  @media all and (max-width: 539px) {
+  }
+  @media all and (min-width: 540px) and (max-width: 809px) {
+  .subtitle {
+    margin-left: $gallery-elem-padding;
+  }
+  }
+  @media all and (min-width: 810px) {
+  .subtitle {
+    margin-left: $gallery-elem-padding;
+  }
+  }
+}
+
+#intro {
+  padding-bottom: 50px;
+  background-color: #E3E3E3;
+  p {
+    color: black;
     line-height: 25px;
   }
   .title {
@@ -466,107 +563,10 @@ section {
       }
     }
     .greeting {
-      width: $elem-width * 2;
-      margin-left: $elem-width / 2;
+      width: $elem-width * 3 - 60px;
+      margin-left: 30px;
     }
     @include clearfix;
-  }
-}
-
-#gallery {
-  padding-top: 1px;
-  padding-bottom: 50px;
-  background-color: #3498db;
-  $gallery-elem-padding: 12px;
-  p {
-    color: $lightgray;
-  }
-  .title {
-    margin-bottom: 20px;
-  }
-  .subtitle {
-    margin-bottom: 30px;
-    border-bottom: 3px solid $lightgray;
-  }
-
-  #gallery-works {
-    margin-bottom: 40px;
-    @include clearfix;
-  }
-
-  #gallery-making {
-    @include clearfix;
-  }
-
-  li {
-    float: left;
-  }
-
-  .work-elem {
-    margin-bottom: 30px;
-    width: ($elem-width);
-    $work-img-width: ($elem-width) - 40px;
-    .work-img {
-      margin-left: (($elem-width) - ($work-img-width)) * 0.5;
-      width: $work-img-width;
-      height: $work-img-width * 0.75;
-      overflow: hidden;
-      border-radius: 8px;
-      img {
-        width: $work-img-width;
-        height: $work-img-width * 0.75;
-        border-radius: 8px;
-      }
-      .work-description {
-        $height: 60px;
-        height: $height;
-        position: relative;
-        border-radius: 8px;
-        top: -($height);
-        background-color: rgba(0, 0, 0, 0.35);
-        p {
-          margin-left: 12px;
-          margin-bottom: 8px;
-          font-size: 14px;
-          color: $lightgray;
-        }
-        .work-title {
-          padding-top: 10px;
-        }
-      }
-    }
-  }
-
-  .making-elem {
-    margin-bottom: 30px;
-    width: ($elem-width);
-    $work-img-width: ($elem-width) - 40px;
-    img {
-      margin-left: (($elem-width) - ($work-img-width)) * 0.5;
-      width: $work-img-width;
-      height: $work-img-width * 0.75;
-      overflow: hidden;
-      border-radius: 8px;
-      img {
-        width: $work-img-width;
-        height: $work-img-width * 0.75;
-        border-radius: 8px;
-      }
-    }
-  }
-
-
-  @media all and (max-width: 539px) {
-  }
-  @media all and (min-width: 540px) and (max-width: 809px) {
-  .subtitle {
-    margin-left: $gallery-elem-padding;
-  }
-  }
-  @media all and (min-width: 810px) {
-  .subtitle {
-    margin-left: $gallery-elem-padding;
-  }
   }
 }
 
@@ -645,14 +645,17 @@ section {
 }
 
 // fancy box
-.fancybox-skin {
-  background-color: #aaa !important;
+.gallery-fancybox {
+  .fancybox-skin {
+    width: 100px !important;
+    background-color: #aaa !important;
+  }
   a.fancybox {
     .work-elem {
       img {
-        position: relative;
-        left: 240px;
-        margin-left: -120px;
+        // position: relative;
+        // left: 240px;
+        // margin-left: -120px;
         width: 480px;
         height: 360px;
         border-radius: 10px;
@@ -682,6 +685,23 @@ section {
         }
       }
     }
+  }
+  @media all and (max-width: 539px) {
+  a.fancybox {
+    .work-elem {
+      img {
+        $img-width: $elem-width;
+        margin-left: 0px;
+        width: $img-width;
+        height: $img-width * 0.75;
+        border-radius: 10px;
+      }
+    }
+  }
+  }
+  @media all and (min-width: 540px) and (max-width: 809px) {
+  }
+  @media all and (min-width: 810px) {
   }
 }
 

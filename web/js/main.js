@@ -167,7 +167,7 @@ main.gallery = {
     $(".fancybox").fancybox({
       openEffect  : 'none',
       closeEffect : 'none',
-      wrapCSS : 'gallery-fancybox-class',
+      wrapCSS : 'gallery-fancybox',
       afterClose: function() {
         $(".fancybox").show();
       }
