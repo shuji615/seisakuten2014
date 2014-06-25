@@ -91,33 +91,33 @@ main.top = {
     this.defaultRotationSpeed = 0.1
     var timer;
     var maxSpeed = 5;
-    $('#top-img').mouseover(function(){
-      clearInterval(timer);
-      timer = setInterval(function () {
-        var speed = self.rotation.getSpeed();
-        if (maxSpeed < speed) {
-          clearInterval(timer);
-          timer = null;
-          return;
-        }
-        self.rotation.setSpeed(speed + 0.01);
-      } , 0.1);
-    });
-    $('#top-img').mouseout(function(){
-      clearInterval(timer);
-      timer = setInterval(function () {
-        var speed = self.rotation.getSpeed();
-        if (self.defaultRotationSpeed > speed) {
-          self.rotation.setSpeed(self.defaultRotationSpeed);
-          clearInterval(timer);
-          timer = null;
-          return;
-        }
-        self.rotation.setSpeed(speed - 0.05);
-      } , 0.1);
-    });
+    // $('#top-img').mouseover(function(){
+    //   clearInterval(timer);
+    //   timer = setInterval(function () {
+    //     var speed = self.rotation.getSpeed();
+    //     if (maxSpeed < speed) {
+    //       clearInterval(timer);
+    //       timer = null;
+    //       return;
+    //     }
+    //     self.rotation.setSpeed(speed + 0.01);
+    //   } , 0.1);
+    // });
+    // $('#top-img').mouseout(function(){
+    //   clearInterval(timer);
+    //   timer = setInterval(function () {
+    //     var speed = self.rotation.getSpeed();
+    //     if (self.defaultRotationSpeed > speed) {
+    //       self.rotation.setSpeed(self.defaultRotationSpeed);
+    //       clearInterval(timer);
+    //       timer = null;
+    //       return;
+    //     }
+    //     self.rotation.setSpeed(speed - 0.05);
+    //   } , 0.1);
+    // });
     $('#top-img').click(function(){
-      main.scroll.to('#intro');
+      main.scroll.to('#gallery');
     });
     this.rotation = ImgRotation('top-img-rotate');
     this.rotation.start(this.defaultRotationSpeed);
@@ -164,14 +164,14 @@ main.nav = {
 
 main.gallery = {
   init: function () {
-    // $(".fancybox").fancybox({
-    //   openEffect  : 'none',
-    //   closeEffect : 'none',
-    //   wrapCSS : 'gallery-fancybox',
-    //   afterClose: function() {
-    //     $(".fancybox").show();
-    //   }
-    // });
+    $(".fancybox").fancybox({
+      openEffect  : 'none',
+      closeEffect : 'none',
+      wrapCSS : 'gallery-fancybox',
+      afterClose: function() {
+        $(".fancybox").show();
+      }
+    });
   },
 };
 
