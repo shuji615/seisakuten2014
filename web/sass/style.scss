@@ -746,7 +746,12 @@ section {
   a.fancybox {
     .work-elem {
       width: ($elem-width * 3);
+      .work-img {
+        @include clearfix;
+      }
       img {
+        position: relative;
+        top: 50%;
         float: left;
         $img-width: $elem-width * 1.5;
         width: $img-width;
