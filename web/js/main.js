@@ -172,6 +172,9 @@ main.gallery = {
         $(".fancybox").show();
       }
     });
+    $('.fancybox').click(function(){
+      console.log('click');
+    });
   },
 };
 
