@@ -502,7 +502,15 @@ li {
       text-align: center; }
 
 .gallery-fancybox .fancybox-skin {
+  position: relative;
+  left: 50%;
+  width: 270px !important;
   background-color: #aaa !important; }
+.gallery-fancybox a.fancybox .work-elem img {
+  margin-left: 0px;
+  width: 270px;
+  height: 202.5px;
+  border-radius: 10px; }
 .gallery-fancybox a.fancybox .work-elem img {
   width: 480px;
   height: 360px;
@@ -518,8 +526,19 @@ li {
   .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-space {
     font-size: 17px; }
 @media all and (max-width: 539px) {
+  .gallery-fancybox .fancybox-skin {
+    margin-left: -145px;
+    width: 270px !important; }
   .gallery-fancybox a.fancybox .work-elem img {
     margin-left: 0px;
     width: 270px;
     height: 202.5px;
     border-radius: 10px; } }
+@media all and (min-width: 540px) and (max-width: 809px) {
+  .gallery-fancybox .fancybox-skin {
+    margin-left: -280px;
+    width: 540px !important; } }
+@media all and (min-width: 810px) {
+  .gallery-fancybox .fancybox-skin {
+    margin-left: -415px;
+    width: 810px !important; } }

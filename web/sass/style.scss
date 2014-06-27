@@ -647,8 +647,21 @@ section {
 // fancy box
 .gallery-fancybox {
   .fancybox-skin {
-    width: 100px !important;
+    position: relative;
+    left: 50%;
+    width: ($elem-width) !important;
     background-color: #aaa !important;
+  }
+  a.fancybox {
+    .work-elem {
+      img {
+        $img-width: $elem-width;
+        margin-left: 0px;
+        width: $img-width;
+        height: $img-width * 0.75;
+        border-radius: 10px;
+      }
+    }
   }
   a.fancybox {
     .work-elem {
@@ -687,6 +700,10 @@ section {
     }
   }
   @media all and (max-width: 539px) {
+  .fancybox-skin {
+    margin-left: -($elem-width * 0.5) - 10px;
+    width: ($elem-width) !important;
+  }
   a.fancybox {
     .work-elem {
       img {
@@ -700,8 +717,16 @@ section {
   }
   }
   @media all and (min-width: 540px) and (max-width: 809px) {
+  .fancybox-skin {
+    margin-left: -($elem-width) - 10px;
+    width: ($elem-width * 2) !important;
+  }
   }
   @media all and (min-width: 810px) {
+  .fancybox-skin {
+    margin-left: -($elem-width * 1.5) - 10px;
+    width: ($elem-width * 3) !important;
+  }
   }
 }
 
