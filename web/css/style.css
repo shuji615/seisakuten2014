@@ -505,7 +505,7 @@ li {
   position: relative;
   left: 50%;
   width: 270px !important;
-  background-color: #aaa !important; }
+  background-color: #efefef !important; }
 .gallery-fancybox a.fancybox .work-elem img {
   margin-left: 0px;
   width: 270px;
@@ -514,7 +514,8 @@ li {
 .gallery-fancybox a.fancybox .work-elem img {
   width: 480px;
   height: 360px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px; }
 .gallery-fancybox a.fancybox .work-elem .work-thumb-title, .gallery-fancybox a.fancybox .work-elem .work-thumb-space, .gallery-fancybox a.fancybox .work-elem .work-thumb-author {
   display: none; }
 .gallery-fancybox a.fancybox .work-elem .work-detail {
@@ -523,8 +524,20 @@ li {
     margin-bottom: 8px; }
   .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-title {
     font-size: 28px; }
+    .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-title p {
+      text-align: center; }
   .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-space {
-    font-size: 17px; }
+    font-size: 17px;
+    margin-bottom: 20px; }
+    .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-space p {
+      text-align: center; }
+  .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-author {
+    font-size: 20px; }
+  .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-affiliation {
+    font-size: 13px;
+    margin-bottom: 25px; }
+  .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-note p {
+    line-height: 22px; }
 @media all and (max-width: 539px) {
   .gallery-fancybox .fancybox-skin {
     margin-left: -145px;
@@ -545,7 +558,8 @@ li {
     .gallery-fancybox a.fancybox .work-elem img {
       position: relative;
       left: 50%;
-      margin-left: -210.6px;
+      margin-bottom: 15px;
+      margin-left: -135px;
       width: 270px;
       height: 202.5px;
       border-radius: 10px; } }
@@ -553,9 +567,30 @@ li {
   .gallery-fancybox a.fancybox .work-elem {
     width: 810px; }
     .gallery-fancybox a.fancybox .work-elem img {
+      float: left;
       width: 405px;
       height: 303.75px;
       border-radius: 10px; }
+    .gallery-fancybox a.fancybox .work-elem .work-description {
+      float: left;
+      width: 270px;
+      margin-left: 70px; }
+    .gallery-fancybox a.fancybox .work-elem .work-detail > div {
+      margin-bottom: 8px; }
+    .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-title {
+      font-size: 28px; }
+      .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-title p {
+        text-align: center; }
+    .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-space {
+      font-size: 17px;
+      margin-bottom: 20px; }
+      .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-space p {
+        text-align: center; }
+    .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-author {
+      font-size: 20px; }
+    .gallery-fancybox a.fancybox .work-elem .work-detail .work-detail-affiliation {
+      font-size: 13px;
+      margin-bottom: 25px; }
   .gallery-fancybox .fancybox-skin {
     margin-left: -415px;
     width: 810px !important; } }

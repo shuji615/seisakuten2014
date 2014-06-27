@@ -650,7 +650,7 @@ section {
     position: relative;
     left: 50%;
     width: ($elem-width) !important;
-    background-color: #aaa !important;
+    background-color: #efefef !important;
   }
   a.fancybox {
     .work-elem {
@@ -666,12 +666,10 @@ section {
   a.fancybox {
     .work-elem {
       img {
-        // position: relative;
-        // left: 240px;
-        // margin-left: -120px;
         width: 480px;
         height: 360px;
         border-radius: 10px;
+        box-shadow: 5px 5px 20px;
       }
       .work-thumb-title, .work-thumb-space, .work-thumb-author {
         display: none;
@@ -683,18 +681,24 @@ section {
         }
         .work-detail-title {
           font-size: 28px;
+          p {text-align: center; }
         }
         .work-detail-space {
           font-size: 17px;
+          margin-bottom: 20px;
+          p {text-align: center; }
         }
         .work-detail-author {
-
+          font-size: 20px;
         }
         .work-detail-affiliation {
-
+          font-size: 13px;
+          margin-bottom: 25px;
         }
         .work-detail-note {
-
+          p {
+            line-height: 22px;
+          }
         }
       }
     }
@@ -728,8 +732,9 @@ section {
       img {
         position: relative;
         left: 50%;
+        margin-bottom: 15px;
         $img-width: $elem-width;
-        margin-left: -($img-width * 0.78);
+        margin-left: -($img-width * 0.5);
         width: $img-width;
         height: $img-width * 0.75;
         border-radius: 10px;
@@ -742,10 +747,40 @@ section {
     .work-elem {
       width: ($elem-width * 3);
       img {
+        float: left;
         $img-width: $elem-width * 1.5;
         width: $img-width;
         height: $img-width * 0.75;
         border-radius: 10px;
+      }
+      .work-description {
+        float: left;
+        width: $elem-width;
+        margin-left: 70px;
+      }
+      .work-detail {
+        &>div {
+          margin-bottom: 8px;
+        }
+        .work-detail-title {
+          font-size: 28px;
+          p {text-align: center; }
+        }
+        .work-detail-space {
+          font-size: 17px;
+          margin-bottom: 20px;
+          p {text-align: center; }
+        }
+        .work-detail-author {
+          font-size: 20px;
+        }
+        .work-detail-affiliation {
+          font-size: 13px;
+          margin-bottom: 25px;
+        }
+        .work-detail-note {
+
+        }
       }
     }
   }
