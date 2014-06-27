@@ -537,8 +537,19 @@ li {
 @media all and (min-width: 540px) and (max-width: 809px) {
   .gallery-fancybox .fancybox-skin {
     margin-left: -280px;
-    width: 540px !important; } }
+    width: 540px !important; }
+  .gallery-fancybox a.fancybox .work-elem img {
+    position: relative;
+    left: 50%;
+    margin-left: -210.6px;
+    width: 270px;
+    height: 202.5px;
+    border-radius: 10px; } }
 @media all and (min-width: 810px) {
+  .gallery-fancybox a.fancybox .work-elem img {
+    width: 405px;
+    height: 303.75px;
+    border-radius: 10px; }
   .gallery-fancybox .fancybox-skin {
     margin-left: -415px;
     width: 810px !important; } }

@@ -721,8 +721,31 @@ section {
     margin-left: -($elem-width) - 10px;
     width: ($elem-width * 2) !important;
   }
+  a.fancybox {
+    .work-elem {
+      img {
+        position: relative;
+        left: 50%;
+        $img-width: $elem-width;
+        margin-left: -($img-width * 0.78);
+        width: $img-width;
+        height: $img-width * 0.75;
+        border-radius: 10px;
+      }
+    }
+  }
   }
   @media all and (min-width: 810px) {
+  a.fancybox {
+    .work-elem {
+      img {
+        $img-width: $elem-width * 1.5;
+        width: $img-width;
+        height: $img-width * 0.75;
+        border-radius: 10px;
+      }
+    }
+  }
   .fancybox-skin {
     margin-left: -($elem-width * 1.5) - 10px;
     width: ($elem-width * 3) !important;
