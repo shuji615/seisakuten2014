@@ -706,6 +706,7 @@ section {
   }
   a.fancybox {
     .work-elem {
+      width: ($elem-width);
       img {
         $img-width: $elem-width;
         margin-left: 0px;
@@ -723,6 +724,7 @@ section {
   }
   a.fancybox {
     .work-elem {
+      width: ($elem-width * 2);
       img {
         position: relative;
         left: 50%;
@@ -738,6 +740,7 @@ section {
   @media all and (min-width: 810px) {
   a.fancybox {
     .work-elem {
+      width: ($elem-width * 3);
       img {
         $img-width: $elem-width * 1.5;
         width: $img-width;
